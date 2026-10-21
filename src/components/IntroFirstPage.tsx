@@ -29,7 +29,7 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         <img
           src="/assets/starting-page-mandap.png"
           alt="Temple Mandap Architecture & Arch"
-          className="w-full h-full object-fill sm:object-cover object-center"
+          className="w-full h-full object-cover object-center"
         />
       </div>
 
@@ -43,8 +43,8 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#F6F9FD]/30 via-transparent to-[#F6F9FD]/20 pointer-events-none" />
       </div>
 
-      {/* ── 2. TOP TYPOGRAPHY: WEDDING NAMES & DATE (DOWN IN WHITE SECTION) ── */}
-      <div className="relative z-20 pt-16 xs:pt-20 sm:pt-24 md:pt-16 px-4 flex flex-col items-center shrink-0">
+      {/* ── 2. TOP TYPOGRAPHY: WEDDING NAMES & DATE (IN UPPER ARCH WHITE SECTION) ── */}
+      <div className="relative z-20 pt-10 xs:pt-12 sm:pt-14 md:pt-16 px-4 flex flex-col items-center shrink-0">
         {/* Groom Name */}
         <h1 className="font-serif text-[38px] xs:text-[44px] sm:text-[54px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
           Hemanth
@@ -77,19 +77,19 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         </p>
       </div>
 
-      {/* ── 3. MIDDLE SECTION: HANDS & BUTTON (BUTTON LOWERED ON MOBILE) ── */}
-      <div className="md:hidden relative z-20 w-full flex-1 flex flex-col items-center justify-between pointer-events-none pb-8 xs:pb-10">
-        {/* Krishna & Radha Auspicious Hands extending edge-to-edge in white area */}
-        <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4 mt-auto mb-2">
+      {/* ── 3. MIDDLE SECTION: HANDS IN CENTER WHITE SPACE & BUTTON IN LOWER CIRCLE ── */}
+      <div className="md:hidden relative z-20 w-full flex-1 flex flex-col items-center justify-between pointer-events-none pb-10 xs:pb-12">
+        {/* Krishna & Radha Auspicious Hands elevated into middle white space */}
+        <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4 my-auto">
           <img
             src="/assets/krishna-radha-hands.png"
             alt="Divine Hands of Love & Companionship"
-            className="w-full min-w-[100vw] h-auto object-cover object-center scale-110"
+            className="w-full min-w-[100vw] h-auto object-cover object-center scale-105 xs:scale-110"
           />
         </div>
 
-        {/* TAP TO OPEN BUTTON brought lower towards mandap base */}
-        <div className="pointer-events-auto mt-2">
+        {/* TAP TO OPEN BUTTON positioned in lower circle above mandap steps */}
+        <div className="pointer-events-auto shrink-0 mb-2">
           <button
             onClick={handleTapToOpen}
             className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-8 xs:px-10 py-3 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.4),0_6px_16px_rgba(22,46,90,0.14)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
