@@ -24,12 +24,12 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
       }`}
     >
       {/* ── 1. BACKGROUND MANDAP ARCHITECTURE ── */}
-      {/* Mobile: Perfect center-aligned mandap & arch */}
+      {/* Mobile: Perfect center-aligned mandap & arch anchored to the top so arch never cuts */}
       <div className="md:hidden absolute inset-0 z-0 pointer-events-none flex items-center justify-center overflow-hidden">
         <img
           src="/assets/starting-page-mandap.png"
           alt="Temple Mandap Architecture & Arch"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-top"
         />
       </div>
 
@@ -83,8 +83,8 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
           />
         </div>
 
-        {/* Tap to Open Button: resting above the temple spire in the lower circle */}
-        <div className="pointer-events-auto mt-auto mb-20 xs:mb-24 sm:mb-28">
+        {/* Tap to Open Button: brought comfortably higher above the temple */}
+        <div className="pointer-events-auto mt-auto mb-32 xs:mb-36 sm:mb-40">
           <button
             onClick={handleTapToOpen}
             className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-8 xs:px-10 py-3 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.4),0_6px_16px_rgba(22,46,90,0.14)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
