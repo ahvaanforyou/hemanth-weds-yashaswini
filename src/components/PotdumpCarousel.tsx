@@ -160,22 +160,22 @@ export const PotdumpCarousel: React.FC = () => {
           className="relative mt-8 sm:mt-14 h-[420px] xs:h-[480px] sm:h-[560px] md:h-[640px] w-full flex items-center justify-center select-none"
           style={{ perspective: '1200px', transformStyle: 'preserve-3d' }}
         >
-          {/* Previous Photo Navigation Button */}
+          {/* Previous Photo Navigation Button (Royal Navy & Ice Blue theme) */}
           <button
             type="button"
             onClick={prevPhoto}
             aria-label="Previous photo"
-            className="absolute left-2 sm:left-6 z-40 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#FAC12C] text-[#2B1207] shadow-[0_4px_16px_rgba(43,18,7,0.35)] border border-[#FFFDF5] backdrop-blur-md transition-all duration-300 hover:bg-[#FFFDF5] hover:text-[#2B1207] hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute left-2 sm:left-6 z-40 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#162E5A] text-white shadow-[0_4px_16px_rgba(22,46,90,0.45)] border-2 border-[#8BBBE5] backdrop-blur-md transition-all duration-300 hover:bg-[#20437E] hover:border-white hover:scale-110 active:scale-95 cursor-pointer"
           >
             <ChevronLeft className="h-5 w-5 sm:h-7 sm:w-7" />
           </button>
 
-          {/* Next Photo Navigation Button */}
+          {/* Next Photo Navigation Button (Royal Navy & Ice Blue theme) */}
           <button
             type="button"
             onClick={nextPhoto}
             aria-label="Next photo"
-            className="absolute right-2 sm:right-6 z-40 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#FAC12C] text-[#2B1207] shadow-[0_4px_16px_rgba(43,18,7,0.35)] border border-[#FFFDF5] backdrop-blur-md transition-all duration-300 hover:bg-[#FFFDF5] hover:text-[#2B1207] hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute right-2 sm:right-6 z-40 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#162E5A] text-white shadow-[0_4px_16px_rgba(22,46,90,0.45)] border-2 border-[#8BBBE5] backdrop-blur-md transition-all duration-300 hover:bg-[#20437E] hover:border-white hover:scale-110 active:scale-95 cursor-pointer"
           >
             <ChevronRight className="h-5 w-5 sm:h-7 sm:w-7" />
           </button>
@@ -184,6 +184,16 @@ export const PotdumpCarousel: React.FC = () => {
           {images.map((item, idx) => {
             const style = getCardTransform(idx, images.length);
             const isCenter = idx === activeIndex;
+
+            // Specific object positioning to keep couple perfectly framed & centered
+            const objectPositionClass =
+              item.image.includes('couple-real-3')
+                ? 'object-cover object-[center_30%]'
+                : item.image.includes('couple-real-4')
+                ? 'object-cover object-[center_25%]'
+                : item.image.includes('couple-real-2')
+                ? 'object-cover object-[center_20%]'
+                : 'object-cover object-center';
 
             return (
               <div
@@ -203,8 +213,8 @@ export const PotdumpCarousel: React.FC = () => {
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden',
                 }}
-                className={`group absolute top-1/2 left-1/2 w-[76%] xs:w-[72%] sm:w-[420px] md:w-[460px] lg:w-[480px] h-[390px] xs:h-[450px] sm:h-[530px] md:h-[600px] lg:h-[620px] overflow-hidden rounded-[26px] sm:rounded-[36px] border-[2.5px] sm:border-[3.5px] border-[#D4AF37] shadow-[0_20px_50px_rgba(22,46,90,0.28)] bg-white cursor-pointer ${
-                  isCenter ? 'hover:shadow-[0_26px_65px_rgba(212,175,55,0.45)] ring-2 ring-[#D4AF37]/50' : 'hover:opacity-75'
+                className={`group absolute top-1/2 left-1/2 w-[76%] xs:w-[72%] sm:w-[420px] md:w-[460px] lg:w-[480px] h-[390px] xs:h-[450px] sm:h-[530px] md:h-[600px] lg:h-[620px] overflow-hidden rounded-[26px] sm:rounded-[36px] border-[2.5px] sm:border-[3.5px] border-[#4B88BD] shadow-[0_20px_50px_rgba(22,46,90,0.28)] bg-white cursor-pointer ${
+                  isCenter ? 'hover:shadow-[0_26px_65px_rgba(32,67,126,0.45)] ring-2 ring-[#8BBBE5]/70' : 'hover:opacity-75'
                 }`}
               >
                 {/* Large Format Pristine Photo */}
@@ -212,11 +222,11 @@ export const PotdumpCarousel: React.FC = () => {
                   src={item.image}
                   alt={item.caption}
                   loading="eager"
-                  className="w-full h-full object-cover object-[center_20%] sm:object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  className={`w-full h-full ${objectPositionClass} transition-transform duration-700 ease-out group-hover:scale-105`}
                 />
 
-                {/* Subtle Inner Gold Inset Frame */}
-                <div className="pointer-events-none absolute inset-2 sm:inset-3 rounded-[20px] sm:rounded-[30px] border border-white/60 z-10" />
+                {/* Subtle Inner Theme Inset Frame */}
+                <div className="pointer-events-none absolute inset-2 sm:inset-3 rounded-[20px] sm:rounded-[30px] border border-[#8BBBE5]/50 z-10" />
               </div>
             );
           })}
@@ -233,8 +243,8 @@ export const PotdumpCarousel: React.FC = () => {
                 aria-label={`Go to photo ${i + 1}`}
                 className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                   activeIndex === i
-                    ? 'w-8 bg-[#162E5A] border-2 border-[#FAC12C]'
-                    : 'w-2.5 bg-[#FAC12C]/60 hover:bg-[#FAC12C]'
+                    ? 'w-8 bg-[#162E5A] border-2 border-[#4B88BD]'
+                    : 'w-2.5 bg-[#4B88BD]/40 hover:bg-[#4B88BD]'
                 }`}
               />
             ))}
@@ -253,13 +263,13 @@ export const PotdumpCarousel: React.FC = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl max-h-[92vh] rounded-3xl overflow-hidden border-2 border-[#D4AF37] shadow-2xl flex items-center justify-center bg-black/60 p-1"
+            className="relative max-w-4xl max-h-[92vh] rounded-3xl overflow-hidden border-2 border-[#4B88BD] shadow-2xl flex items-center justify-center bg-black/60 p-1"
           >
             <img src={lightboxImg} alt="Enlarged gallery view" className="max-w-full max-h-[88vh] object-contain rounded-2xl" />
             <button
               onClick={() => setLightboxImg(null)}
               aria-label="Close image"
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition-colors cursor-pointer"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#162E5A] text-white flex items-center justify-center hover:bg-[#20437E] border border-[#8BBBE5] transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>

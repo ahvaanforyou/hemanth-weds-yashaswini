@@ -288,22 +288,22 @@ export const EventsSection: React.FC = () => {
           className="relative mt-8 sm:mt-12 h-[300px] xs:h-[330px] sm:h-[420px] md:h-[460px] w-full flex items-center justify-center select-none"
           style={{ perspective: '1200px', transformStyle: 'preserve-3d' }}
         >
-          {/* Previous Card Navigation Button (Yellow circular button from Hitesh wedding) */}
+          {/* Previous Card Navigation Button (Royal Navy & Blue Theme) */}
           <button
             type="button"
             onClick={prevEvent}
             aria-label="Previous celebration"
-            className="absolute left-1 sm:left-4 z-40 flex h-9 w-9 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#FAC12C] text-[#2B1207] shadow-[0_4px_16px_rgba(43,18,7,0.35)] border border-[#FFFDF5] backdrop-blur-md transition-all duration-300 hover:bg-[#FFFDF5] hover:text-[#2B1207] hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute left-1 sm:left-4 z-40 flex h-9 w-9 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#162E5A] text-white shadow-[0_4px_16px_rgba(22,46,90,0.45)] border-2 border-[#8BBBE5] backdrop-blur-md transition-all duration-300 hover:bg-[#20437E] hover:border-white hover:scale-110 active:scale-95 cursor-pointer"
           >
             <ChevronLeft className="h-5 w-5 sm:h-7 sm:w-7" />
           </button>
 
-          {/* Next Card Navigation Button (Yellow circular button from Hitesh wedding) */}
+          {/* Next Card Navigation Button (Royal Navy & Blue Theme) */}
           <button
             type="button"
             onClick={nextEvent}
             aria-label="Next celebration"
-            className="absolute right-1 sm:right-4 z-40 flex h-9 w-9 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#FAC12C] text-[#2B1207] shadow-[0_4px_16px_rgba(43,18,7,0.35)] border border-[#FFFDF5] backdrop-blur-md transition-all duration-300 hover:bg-[#FFFDF5] hover:text-[#2B1207] hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute right-1 sm:right-4 z-40 flex h-9 w-9 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#162E5A] text-white shadow-[0_4px_16px_rgba(22,46,90,0.45)] border-2 border-[#8BBBE5] backdrop-blur-md transition-all duration-300 hover:bg-[#20437E] hover:border-white hover:scale-110 active:scale-95 cursor-pointer"
           >
             <ChevronRight className="h-5 w-5 sm:h-7 sm:w-7" />
           </button>
@@ -340,8 +340,8 @@ export const EventsSection: React.FC = () => {
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden',
                 }}
-                className={`group absolute top-1/2 left-1/2 w-[92%] xs:w-[90%] sm:w-[86%] md:w-[88%] max-w-5xl h-[260px] xs:h-[290px] sm:h-[390px] md:h-[430px] overflow-hidden rounded-[24px] sm:rounded-[36px] border-[2.5px] sm:border-[3px] border-[#D4AF37] ring-1 ring-[#FFF2B2]/60 shadow-[0_16px_44px_rgba(212,175,55,0.28)] bg-[#1A050A] cursor-pointer ${
-                  isCenter ? 'hover:shadow-[0_24px_60px_rgba(212,175,55,0.45)]' : 'hover:opacity-75'
+                className={`group absolute top-1/2 left-1/2 w-[92%] xs:w-[90%] sm:w-[86%] md:w-[88%] max-w-5xl h-[260px] xs:h-[290px] sm:h-[390px] md:h-[430px] overflow-hidden rounded-[24px] sm:rounded-[36px] border-[2.5px] sm:border-[3px] border-[#4B88BD] ring-1 ring-[#8BBBE5]/60 shadow-[0_16px_44px_rgba(22,46,90,0.32)] bg-[#1A050A] cursor-pointer ${
+                  isCenter ? 'hover:shadow-[0_24px_60px_rgba(32,67,126,0.45)] ring-2 ring-[#8BBBE5]/80' : 'hover:opacity-75'
                 }`}
               >
                 {/* Full Background Image */}
@@ -365,8 +365,8 @@ export const EventsSection: React.FC = () => {
                   className="pointer-events-none absolute -bottom-4 -right-4 w-32 sm:w-52 h-auto opacity-50 sm:opacity-65 group-hover:opacity-80 select-none object-contain rotate-180 z-20 transition-all duration-500 group-hover:scale-105"
                 />
 
-                {/* Inner Golden Outline Frame */}
-                <div className="pointer-events-none absolute inset-2 sm:inset-3.5 rounded-[18px] sm:rounded-[30px] border border-[#D4AF37]/50 z-20" />
+                {/* Inner Outline Frame (Theme Blue) */}
+                <div className="pointer-events-none absolute inset-2 sm:inset-3.5 rounded-[18px] sm:rounded-[30px] border border-[#8BBBE5]/50 z-20" />
 
                 {/* Left-Aligned Seamless Text & Action Column */}
                 <div className="relative z-30 flex h-full items-center pl-4 xs:pl-6 sm:pl-10 md:pl-14">
@@ -396,7 +396,7 @@ export const EventsSection: React.FC = () => {
                       className="w-24 xs:w-28 sm:w-44 h-auto scale-y-[-1] object-contain drop-shadow-sm my-1 xs:my-1.5 sm:my-2 brightness-110"
                     />
 
-                    {/* Modern Golden-Bordered Circular Arrow Button */}
+                    {/* Modern Circular Arrow Button */}
                     <button
                       type="button"
                       onClick={(e) => {
@@ -404,7 +404,7 @@ export const EventsSection: React.FC = () => {
                         handleOpenEventModal(event);
                       }}
                       aria-label={`View details for ${event.name}`}
-                      className={`group/btn relative mt-1 sm:mt-2 flex h-10 w-10 xs:h-11 xs:w-11 sm:h-14 sm:w-14 items-center justify-center rounded-full ${theme.btnBg} ${theme.btnColor} border-[2px] sm:border-[2.5px] ${theme.btnRing} shadow-[0_4px_16px_rgba(0,0,0,0.28),0_0_12px_rgba(212,175,55,0.4)] ring-2 sm:ring-2 ring-[#D4AF37]/80 transition-all duration-300 group-hover:scale-110 group-hover:ring-4 group-hover:ring-[#D4AF37]/90 active:scale-95 cursor-pointer`}
+                      className={`group/btn relative mt-1 sm:mt-2 flex h-10 w-10 xs:h-11 xs:w-11 sm:h-14 sm:w-14 items-center justify-center rounded-full ${theme.btnBg} ${theme.btnColor} border-[2px] sm:border-[2.5px] border-[#8BBBE5] shadow-[0_4px_16px_rgba(0,0,0,0.28)] ring-2 sm:ring-2 ring-[#4B88BD]/70 transition-all duration-300 group-hover:scale-110 group-hover:ring-4 group-hover:ring-[#4B88BD]/90 active:scale-95 cursor-pointer`}
                     >
                       <div className="absolute inset-0 rounded-full bg-gradient-to-t from-transparent via-white/10 to-white/35 pointer-events-none" />
                       <ArrowRight className="relative z-10 h-5 w-5 sm:h-7 sm:w-7 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2.5} />
@@ -412,9 +412,9 @@ export const EventsSection: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Corner Accent Date Badge - High Visibility Ivory & Gold (Matches Reference) */}
-                <div className="absolute right-2.5 top-2.5 sm:right-5 sm:top-5 z-30 flex items-center gap-1 sm:gap-1.5 rounded-full bg-white/95 px-2.5 py-0.5 sm:px-4 sm:py-2 font-serif text-[8.5px] xs:text-[9.5px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-[#3A0810] font-bold backdrop-blur-md border border-[#D4AF37] sm:border-2 shadow-md">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#D4AF37]" />
+                {/* Corner Accent Date Badge */}
+                <div className="absolute right-2.5 top-2.5 sm:right-5 sm:top-5 z-30 flex items-center gap-1 sm:gap-1.5 rounded-full bg-white/95 px-2.5 py-0.5 sm:px-4 sm:py-2 font-serif text-[8.5px] xs:text-[9.5px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-[#162E5A] font-bold backdrop-blur-md border border-[#4B88BD] sm:border-2 shadow-md">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#4B88BD]" />
                   {theme.dateBadge}
                 </div>
               </div>
@@ -422,7 +422,7 @@ export const EventsSection: React.FC = () => {
           })}
         </div>
 
-        {/* Carousel Wheel Dots & Swipe Hint (Matches Hitesh Wedding) */}
+        {/* Carousel Wheel Dots & Swipe Hint */}
         <div className="mt-6 sm:mt-8 flex flex-col items-center gap-2">
           <div className="flex items-center justify-center gap-2.5">
             {events.map((_, i) => (
@@ -433,8 +433,8 @@ export const EventsSection: React.FC = () => {
                 aria-label={`Go to event ${i + 1}`}
                 className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                   activeIndex === i
-                    ? 'w-8 bg-[#162E5A] border-2 border-[#FAC12C]'
-                    : 'w-2.5 bg-[#FAC12C]/60 hover:bg-[#FAC12C]'
+                    ? 'w-8 bg-[#162E5A] border-2 border-[#4B88BD]'
+                    : 'w-2.5 bg-[#4B88BD]/40 hover:bg-[#4B88BD]'
                 }`}
               />
             ))}
@@ -453,7 +453,7 @@ export const EventsSection: React.FC = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-3xl bg-white border-2 border-[#D4AF37] shadow-[0_25px_70px_rgba(22,46,90,0.35)] animate-fade-in-up"
+            className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-3xl bg-white border-2 border-[#4B88BD] shadow-[0_25px_70px_rgba(22,46,90,0.35)] animate-fade-in-up"
           >
             <div className="relative h-52 sm:h-60 w-full overflow-hidden">
               <img
@@ -466,13 +466,13 @@ export const EventsSection: React.FC = () => {
               <button
                 onClick={() => setActiveModalEvent(null)}
                 aria-label="Close event details"
-                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/50 text-white hover:bg-black flex items-center justify-center transition-colors cursor-pointer"
+                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-[#162E5A] text-white hover:bg-[#20437E] border border-[#8BBBE5] flex items-center justify-center transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
 
               <div className="absolute bottom-4 left-6 right-6 text-left">
-                <span className="font-sans text-xs font-bold tracking-widest uppercase text-[#F5E4B2]">
+                <span className="font-sans text-xs font-bold tracking-widest uppercase text-[#8BBBE5]">
                   {activeModalEvent.day}
                 </span>
                 <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-white mt-1 drop-shadow-md">
