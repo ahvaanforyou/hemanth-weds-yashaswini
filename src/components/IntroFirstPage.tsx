@@ -43,29 +43,29 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#F6F9FD]/30 via-transparent to-[#F6F9FD]/20 pointer-events-none" />
       </div>
 
-      {/* ── 2. TOP TYPOGRAPHY: WEDDING NAMES & DATE (LOWERED DEEPER INTO OPEN WHITE SPACE FOR MOBILE) ── */}
-      <div className="relative z-20 pt-[14vh] xs:pt-[15vh] sm:pt-20 md:pt-16 px-4 flex flex-col items-center">
+      {/* ── 2. TOP TYPOGRAPHY: WEDDING NAMES & DATE (COMPACT PADDING SO HANDS & BUTTON SIT IN VIEW) ── */}
+      <div className="relative z-20 pt-8 xs:pt-10 sm:pt-14 md:pt-16 px-4 flex flex-col items-center shrink-0">
         {/* Groom Name */}
-        <h1 className="font-serif text-[42px] xs:text-[50px] sm:text-[58px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
+        <h1 className="font-serif text-[38px] xs:text-[44px] sm:text-[54px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
           Hemanth
         </h1>
 
         {/* weds with swashes */}
-        <div className="my-1.5 xs:my-2 sm:my-2.5 flex items-center justify-center gap-2.5 sm:gap-4 w-full">
+        <div className="my-1 xs:my-1.5 flex items-center justify-center gap-2.5 sm:gap-4 w-full">
           <span className="h-[1.5px] w-12 xs:w-16 sm:w-24 md:w-36 bg-gradient-to-r from-transparent via-[#4B88BD] to-[#4B88BD] rounded-full" />
-          <span className="font-script text-2xl xs:text-3xl sm:text-4xl md:text-6xl text-[#3A75A4] italic -mt-1 select-none">
+          <span className="font-script text-2xl xs:text-3xl sm:text-4xl md:text-6xl text-[#3A75A4] italic -mt-0.5 select-none">
             weds
           </span>
           <span className="h-[1.5px] w-12 xs:w-16 sm:w-24 md:w-36 bg-gradient-to-l from-transparent via-[#4B88BD] to-[#4B88BD] rounded-full" />
         </div>
 
         {/* Bride Name */}
-        <h2 className="font-serif text-[42px] xs:text-[50px] sm:text-[58px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
+        <h2 className="font-serif text-[38px] xs:text-[44px] sm:text-[54px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
           Yashaswini
         </h2>
 
         {/* Hairline with center ornament */}
-        <div className="my-2.5 xs:my-3 sm:my-3.5 flex items-center justify-center gap-2.5 sm:gap-3 text-[#B28A22]">
+        <div className="my-2 xs:my-2.5 flex items-center justify-center gap-2.5 sm:gap-3 text-[#B28A22]">
           <span className="h-[1px] w-8 xs:w-12 sm:w-16 bg-[#C5DAEE]" />
           <span className="text-[#3A75A4] text-[10px] xs:text-xs">✣</span>
           <span className="h-[1px] w-8 xs:w-12 sm:w-16 bg-[#C5DAEE]" />
@@ -77,11 +77,11 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         </p>
       </div>
 
-      {/* ── 3. MIDDLE / LOWER SECTION: HANDS & BUTTON (CENTERED ON MOBILE) ── */}
-      {/* MOBILE: Center hands & button in the middle of the lower half without overflowing */}
-      <div className="md:hidden relative z-20 w-full flex-1 flex flex-col items-center justify-center pointer-events-none pb-6">
+      {/* ── 3. MIDDLE / LOWER SECTION: HANDS & BUTTON (CENTERED IN THE MIDDLE OF MOBILE VIEW) ── */}
+      {/* MOBILE: Hands & Button sitting directly in the middle viewport */}
+      <div className="md:hidden relative z-20 w-full flex flex-col items-center justify-center my-auto pointer-events-none pb-8 xs:pb-12">
         {/* Krishna & Radha Auspicious Hands extending edge-to-edge */}
-        <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4">
+        <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4 -mb-1 xs:mb-1">
           <img
             src="/assets/krishna-radha-hands.png"
             alt="Divine Hands of Love & Companionship"
@@ -89,11 +89,11 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
           />
         </div>
 
-        {/* TAP TO OPEN BUTTON directly centered under the hands */}
-        <div className="pointer-events-auto mt-2.5 xs:mt-3.5">
+        {/* TAP TO OPEN BUTTON positioned right in the center view below hands */}
+        <div className="pointer-events-auto mt-1 xs:mt-2">
           <button
             onClick={handleTapToOpen}
-            className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-8 xs:px-10 py-3 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.35),0_6px_16px_rgba(22,46,90,0.12)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+            className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-8 xs:px-10 py-3 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.4),0_6px_16px_rgba(22,46,90,0.14)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
           >
             <span className="font-sans text-xs xs:text-sm font-bold tracking-[0.25em] uppercase text-[#162E5A] pl-1">
               TAP TO OPEN

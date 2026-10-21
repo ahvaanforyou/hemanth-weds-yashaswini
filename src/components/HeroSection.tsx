@@ -6,12 +6,12 @@ export const HeroSection: React.FC = () => {
   return (
     <section id="hero" className="relative w-full min-h-screen lg:h-screen overflow-hidden bg-white flex flex-col lg:flex-row">
       {/* ── 1. LEFT BACKGROUND: HIGH-RES COUPLE ON TERRACE SUNSET PHOTO (ZOOMED & CENTERED TO STAND OUT) ── */}
-      {/* On mobile: semi-elliptical arched frame matching reference image 1 */}
+      {/* On mobile: semi-elliptical arched frame matching reference image 1, zoomed in for crystal clear face view */}
       <div className="relative w-full lg:absolute lg:inset-y-0 lg:left-0 lg:w-[70%] xl:w-[72%] h-[380px] xs:h-[420px] sm:h-[480px] lg:h-full overflow-hidden bg-[#0F1E33] shrink-0 rounded-b-[48%_38px] sm:rounded-b-[50%_60px] lg:rounded-none shadow-md lg:shadow-none z-10">
         <img
           src="/client-images/hero-couple-landscape.jpg"
           alt="Hemanth & Yashaswini"
-          className="w-full h-full object-cover object-[36%_25%] lg:object-[36%_center] scale-105 lg:scale-115 transition-transform duration-1000 ease-out hover:scale-120"
+          className="w-full h-full object-cover object-[36%_22%] lg:object-[36%_center] scale-135 xs:scale-140 lg:scale-115 transition-transform duration-1000 ease-out hover:scale-145 lg:hover:scale-120"
         />
         {/* Subtle sunset warmth wash */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
