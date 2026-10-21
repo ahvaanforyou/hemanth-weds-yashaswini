@@ -187,7 +187,7 @@ export const weddingConfig = {
   },
 
   rsvp: {
-    // Paste your Google Apps Script Web App URL here after deploying google-sheet-script.gs
-    googleSheetWebhookUrl: '',
+    // Connected to deployed Google Apps Script Web App
+    googleSheetWebhookUrl: 'https://script.google.com/macros/s/AKfycbw7_mGUM2OLN-tdZnJzSHXALuEbdBKWCxsmKgtp2BD2UUj8cU5iJMRpqdyet8NaQ1XB/exec',
   },
 };
