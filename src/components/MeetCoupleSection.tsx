@@ -143,7 +143,7 @@ export const MeetCoupleSection: React.FC = () => {
                 <img
                   src={groomData.photo}
                   alt={groomData.name}
-                  className="w-full h-full object-cover object-[center_12%] scale-130 transition-transform duration-700 group-hover:scale-135"
+                  className="w-full h-full object-cover object-[center_10%] scale-[1.7] sm:scale-130 transition-transform duration-700 group-hover:scale-[1.8] sm:group-hover:scale-135"
                 />
               </div>
             </div>

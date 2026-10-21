@@ -161,13 +161,13 @@ export const weddingConfig = {
     },
     {
       id: 'chittoor-haldi',
-      name: 'Home at Kongareddipalli',
+      name: "Jattepalli's Home, Kongareddipalli",
       city: 'Chittoor, Andhra Pradesh',
       label: 'Haldi Ceremony Venue',
       eventsHosted: ['Haldi Ceremony (30 Oct)'],
-      address: 'Kongareddipalli, Chittoor, Andhra Pradesh',
+      address: 'Kongareddipalli, Chittoor, Andhra Pradesh - 517001',
       mapsSearchUrl: 'https://maps.app.goo.gl/hFRn6THzovTCb2XD7',
-      embedUrl: 'https://maps.google.com/maps?q=Kongareddipalli+Chittoor+Andhra+Pradesh&t=&z=14&ie=UTF8&iwloc=&output=embed',
+      embedUrl: 'https://maps.google.com/maps?q=13.2132967,79.1173748&hl=en&z=17&output=embed',
     },
   ],
 

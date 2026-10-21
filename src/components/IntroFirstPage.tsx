@@ -44,44 +44,44 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
       </div>
 
       {/* ── 2. TOP TYPOGRAPHY: WEDDING NAMES & DATE ── */}
-      <div className="relative z-20 pt-6 xs:pt-8 sm:pt-10 md:pt-16 px-4 flex flex-col items-center shrink-0">
+      <div className="relative z-20 pt-4 xs:pt-6 sm:pt-8 md:pt-16 px-4 flex flex-col items-center shrink-0">
         {/* Groom Name */}
-        <h1 className="font-serif text-[36px] xs:text-[42px] sm:text-[50px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
+        <h1 className="font-serif text-[34px] xs:text-[38px] sm:text-[46px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
           Hemanth
         </h1>
 
         {/* weds with swashes */}
-        <div className="my-1 flex items-center justify-center gap-2.5 sm:gap-4 w-full">
-          <span className="h-[1.5px] w-12 xs:w-16 sm:w-24 md:w-36 bg-gradient-to-r from-transparent via-[#4B88BD] to-[#4B88BD] rounded-full" />
-          <span className="font-script text-2xl xs:text-3xl sm:text-4xl md:text-6xl text-[#3A75A4] italic -mt-0.5 select-none">
+        <div className="my-0.5 xs:my-1 flex items-center justify-center gap-2 sm:gap-4 w-full">
+          <span className="h-[1.5px] w-10 xs:w-14 sm:w-20 md:w-36 bg-gradient-to-r from-transparent via-[#4B88BD] to-[#4B88BD] rounded-full" />
+          <span className="font-script text-xl xs:text-2xl sm:text-3xl md:text-6xl text-[#3A75A4] italic -mt-0.5 select-none">
             weds
           </span>
-          <span className="h-[1.5px] w-12 xs:w-16 sm:w-24 md:w-36 bg-gradient-to-l from-transparent via-[#4B88BD] to-[#4B88BD] rounded-full" />
+          <span className="h-[1.5px] w-10 xs:w-14 sm:w-20 md:w-36 bg-gradient-to-l from-transparent via-[#4B88BD] to-[#4B88BD] rounded-full" />
         </div>
 
         {/* Bride Name */}
-        <h2 className="font-serif text-[36px] xs:text-[42px] sm:text-[50px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
+        <h2 className="font-serif text-[34px] xs:text-[38px] sm:text-[46px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
           Yashaswini
         </h2>
 
         {/* Hairline with center ornament */}
-        <div className="my-1.5 xs:my-2 flex items-center justify-center gap-2.5 sm:gap-3 text-[#B28A22]">
-          <span className="h-[1px] w-8 xs:w-12 sm:w-16 bg-[#C5DAEE]" />
-          <span className="text-[#3A75A4] text-[10px] xs:text-xs">✣</span>
-          <span className="h-[1px] w-8 xs:w-12 sm:w-16 bg-[#C5DAEE]" />
+        <div className="my-1 xs:my-1.5 flex items-center justify-center gap-2 sm:gap-3 text-[#B28A22]">
+          <span className="h-[1px] w-6 xs:w-10 sm:w-14 bg-[#C5DAEE]" />
+          <span className="text-[#3A75A4] text-[9px] xs:text-[10px]">✣</span>
+          <span className="h-[1px] w-6 xs:w-10 sm:w-14 bg-[#C5DAEE]" />
         </div>
 
         {/* Date in spaced uppercase */}
-        <p className="font-sans text-[10px] xs:text-[11px] sm:text-xs md:text-base tracking-[0.38em] uppercase text-[#30517A] font-semibold pl-1">
+        <p className="font-sans text-[9px] xs:text-[10px] sm:text-xs md:text-base tracking-[0.38em] uppercase text-[#30517A] font-semibold pl-1">
           01 &nbsp;NOVEMBER&nbsp; 2026
         </p>
       </div>
 
-      {/* ── 3. MIDDLE SECTION: ELEVATED HANDS & BUTTON (LIFTED SIGNIFICANTLY UP FOR MOBILE) ── */}
-      {/* MOBILE: Shifted noticeably higher up with -translate-y-8 to -translate-y-12 */}
-      <div className="md:hidden relative z-20 w-full flex flex-col items-center justify-center my-auto pointer-events-none -translate-y-8 xs:-translate-y-12">
+      {/* ── 3. MIDDLE SECTION: ELEVATED HANDS & BUTTON (LIFTED HIGH IN MOBILE VIEW) ── */}
+      {/* MOBILE: Placed in the comfortable upper-middle viewport */}
+      <div className="md:hidden relative z-20 w-full flex flex-col items-center justify-center mt-2 xs:mt-3 pointer-events-none pb-4">
         {/* Krishna & Radha Auspicious Hands extending edge-to-edge */}
-        <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4 mb-2">
+        <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4 -mb-1 xs:mb-0">
           <img
             src="/assets/krishna-radha-hands.png"
             alt="Divine Hands of Love & Companionship"
@@ -90,10 +90,10 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         </div>
 
         {/* TAP TO OPEN BUTTON directly beneath the elevated hands */}
-        <div className="pointer-events-auto">
+        <div className="pointer-events-auto mt-1 xs:mt-2">
           <button
             onClick={handleTapToOpen}
-            className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-8 xs:px-10 py-3 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.4),0_6px_16px_rgba(22,46,90,0.14)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+            className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-7 xs:px-9 py-2.5 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.4),0_6px_16px_rgba(22,46,90,0.14)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
           >
             <span className="font-sans text-xs xs:text-sm font-bold tracking-[0.25em] uppercase text-[#162E5A] pl-1">
               TAP TO OPEN
