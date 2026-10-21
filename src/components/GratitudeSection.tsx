@@ -61,16 +61,16 @@ export const GratitudeSection: React.FC = () => {
               <span className="h-[1px] w-14 bg-[#B8D1E8]" />
             </div>
 
-            {/* Parents Line */}
+            {/* Parents Line (Groom parents first, Bride parents next as requested) */}
             <div className="max-w-md mx-auto space-y-1.5 mt-2">
               <p className="font-sans text-sm sm:text-base font-semibold text-[#162E5A]">
-                Smt. Bharathi &amp; Sri Prabhakar Babu
+                Smt. Pratibha &amp; Sri Tirupathaiah
               </p>
               <p className="font-sans text-xs uppercase tracking-widest text-[#7999B8]">
                 &amp;
               </p>
               <p className="font-sans text-sm sm:text-base font-semibold text-[#162E5A]">
-                Smt. Pratibha &amp; Sri Tirupathaiah
+                Smt. Bharathi &amp; Sri Prabhakar Babu
               </p>
             </div>
 
