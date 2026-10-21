@@ -157,7 +157,7 @@ export const PotdumpCarousel: React.FC = () => {
             setIsPaused(false);
             handleTouchEnd(e);
           }}
-          className="relative mt-8 sm:mt-12 h-[300px] xs:h-[330px] sm:h-[420px] md:h-[460px] w-full flex items-center justify-center select-none"
+          className="relative mt-8 sm:mt-12 h-[340px] xs:h-[380px] sm:h-[480px] md:h-[530px] w-full flex items-center justify-center select-none"
           style={{ perspective: '1200px', transformStyle: 'preserve-3d' }}
         >
           {/* Previous Photo Navigation Button */}
@@ -203,20 +203,30 @@ export const PotdumpCarousel: React.FC = () => {
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden',
                 }}
-                className={`group absolute top-1/2 left-1/2 w-[92%] xs:w-[90%] sm:w-[86%] md:w-[88%] max-w-5xl h-[260px] xs:h-[290px] sm:h-[390px] md:h-[430px] overflow-hidden rounded-[24px] sm:rounded-[36px] border-[2.5px] sm:border-[3px] border-[#D4AF37] ring-1 ring-[#FFF2B2]/60 shadow-[0_16px_44px_rgba(212,175,55,0.28)] bg-[#0E1E3D] cursor-pointer ${
+                className={`group absolute top-1/2 left-1/2 w-[92%] xs:w-[90%] sm:w-[86%] md:w-[88%] max-w-5xl h-[300px] xs:h-[340px] sm:h-[440px] md:h-[490px] overflow-hidden rounded-[24px] sm:rounded-[36px] border-[2.5px] sm:border-[3px] border-[#D4AF37] ring-1 ring-[#FFF2B2]/60 shadow-[0_16px_44px_rgba(212,175,55,0.28)] bg-[#0A1424] cursor-pointer ${
                   isCenter ? 'hover:shadow-[0_24px_60px_rgba(212,175,55,0.45)]' : 'hover:opacity-75'
                 }`}
               >
-                {/* Full Photo */}
+                {/* Ambient Blurred Backdrop Matching the Photo Palette */}
                 <img
                   src={item.image}
-                  alt={item.caption}
-                  loading="eager"
-                  className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none"
                 />
 
-                {/* Gradient Overlay for Text Legibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
+                {/* Pristine Full Photo (Uncropped - Complete Size Visible) */}
+                <div className="relative z-10 w-full h-full flex items-center justify-center p-2 sm:p-3">
+                  <img
+                    src={item.image}
+                    alt={item.caption}
+                    loading="eager"
+                    className="max-w-full max-h-full object-contain rounded-[18px] sm:rounded-[28px] transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                  />
+                </div>
+
+                {/* Subtle Gradient Overlay for Text Legibility at Bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none z-20" />
 
                 {/* Inner Gold Border Frame */}
                 <div className="pointer-events-none absolute inset-2 sm:inset-3.5 rounded-[18px] sm:rounded-[30px] border border-[#D4AF37]/50 z-20" />

@@ -117,39 +117,34 @@ export const weddingConfig = {
 
   potdump: [
     {
-      image: '/client-images/hero-couple.png',
-      caption: 'Golden Hours & Endless Smiles',
-      tag: 'Sunset Glow',
+      image: '/client-images/couple-real-4.jpg',
+      caption: 'Royal Elegance & Divine Grace',
+      tag: 'Kanjeevaram & Sherwani',
+    },
+    {
+      image: '/client-images/couple-real-2.jpg',
+      caption: 'Lost in Each Other’s Smiles',
+      tag: 'Candid Love',
+    },
+    {
+      image: '/client-images/couple-real-1.jpg',
+      caption: 'A Lifetime of Laughter Begins',
+      tag: 'Cherished Moments',
+    },
+    {
+      image: '/client-images/couple-real-3.jpg',
+      caption: 'Two Hearts, One Soul',
+      tag: 'Together Always',
     },
     {
       image: '/client-images/gallery-1.jpg',
       caption: 'The Promise of Forever',
-      tag: 'Cherished Moments',
+      tag: 'Golden Memories',
     },
     {
       image: '/client-images/gallery-2.jpg',
-      caption: 'Laughter That Feels Like Home',
-      tag: 'Candid Love',
-    },
-    {
-      image: '/client-images/gallery-3.jpg',
-      caption: 'Walking Hand in Hand',
-      tag: 'Together Always',
-    },
-    {
-      image: '/client-images/gallery-4.jpg',
       caption: 'Eyes Full of Dreams',
       tag: 'Sweet Anticipation',
-    },
-    {
-      image: '/client-images/story-1.jpg',
-      caption: 'Two Souls, One Beautiful Destiny',
-      tag: 'Pure Joy',
-    },
-    {
-      image: '/client-images/story-3.jpg',
-      caption: 'Joy in the Little Moments',
-      tag: 'Heart to Heart',
     },
   ],
 

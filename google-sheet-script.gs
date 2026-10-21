@@ -198,9 +198,6 @@ function setupSheet() {
   sheet.setColumnWidth(7, 180); // Muhurtham
   sheet.setColumnWidth(8, 150); // Reception
   sheet.setColumnWidth(9, 300); // Wishes
-
-  // Ensure gridlines are visible
-  sheet.setHideGridlines(false);
 }
 
 /**

@@ -5,12 +5,12 @@ import { weddingConfig } from '../wedding.config';
 export const HeroSection: React.FC = () => {
   return (
     <section id="hero" className="relative w-full min-h-screen lg:h-screen overflow-hidden bg-white flex flex-col lg:flex-row">
-      {/* ── 1. LEFT BACKGROUND: HIGH-RES COUPLE ON TERRACE SUNSET PHOTO (SHIFTED LEFT SO RIGHT PORTION HAS ROOM) ── */}
-      <div className="relative w-full lg:absolute lg:inset-y-0 lg:left-0 lg:w-[68%] xl:w-[70%] h-[380px] xs:h-[420px] sm:h-[480px] lg:h-full overflow-hidden bg-[#0F1E33] shrink-0">
+      {/* ── 1. LEFT BACKGROUND: HIGH-RES COUPLE ON TERRACE SUNSET PHOTO (ZOOMED & CENTERED TO STAND OUT) ── */}
+      <div className="relative w-full lg:absolute lg:inset-y-0 lg:left-0 lg:w-[70%] xl:w-[72%] h-[380px] xs:h-[420px] sm:h-[480px] lg:h-full overflow-hidden bg-[#0F1E33] shrink-0">
         <img
           src="/client-images/hero-couple-landscape.jpg"
           alt="Hemanth & Yashaswini"
-          className="w-full h-full object-cover object-[28%_25%] lg:object-[28%_center] transition-transform duration-1000 ease-out hover:scale-105"
+          className="w-full h-full object-cover object-[36%_25%] lg:object-[36%_center] scale-105 lg:scale-115 transition-transform duration-1000 ease-out hover:scale-120"
         />
         {/* Subtle sunset warmth wash */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
