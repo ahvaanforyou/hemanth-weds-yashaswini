@@ -117,35 +117,35 @@ export const ScratchCountdownSection: React.FC = () => {
     ctx.save();
     ctx.scale(dpr, dpr);
 
-    // Elegant Royal Navy + Ice Blue + Shimmering Gold Foil Gradient
+    // Royal Navy + Theme Blue Shimmer Gradient
     const grad = ctx.createLinearGradient(0, 0, width, height);
     grad.addColorStop(0, '#162E5A');
-    grad.addColorStop(0.25, '#2A558C');
-    grad.addColorStop(0.5, '#D4AF37');
-    grad.addColorStop(0.75, '#568CBF');
+    grad.addColorStop(0.3, '#2A558C');
+    grad.addColorStop(0.6, '#4B88BD');
+    grad.addColorStop(0.85, '#8BBBE5');
     grad.addColorStop(1, '#0F2042');
 
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, width, height);
 
-    // Ornate Inner Gold Foil Frame
-    ctx.strokeStyle = 'rgba(255, 240, 180, 0.9)';
-    ctx.lineWidth = 3;
-    ctx.strokeRect(16, 16, width - 32, height - 32);
+    // Ornate Inner Theme Outline Frame
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.9)';
+    ctx.lineWidth = 2.5;
+    ctx.strokeRect(12, 12, width - 24, height - 24);
 
-    ctx.strokeStyle = 'rgba(22, 46, 90, 0.4)';
+    ctx.strokeStyle = 'rgba(139, 187, 229, 0.5)';
     ctx.lineWidth = 1.5;
-    ctx.strokeRect(24, 24, width - 48, height - 48);
+    ctx.strokeRect(18, 18, width - 36, height - 36);
 
     // Delicate Star Accents
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
     const sparkleCoords = [
-      [40, 40], [width - 40, 40], [40, height - 40], [width - 40, height - 40],
-      [width * 0.2, 30], [width * 0.8, 30], [width * 0.2, height - 30], [width * 0.8, height - 30],
+      [30, 30], [width - 30, 30], [30, height - 30], [width - 30, height - 30],
+      [width * 0.25, 20], [width * 0.75, 20], [width * 0.25, height - 20], [width * 0.75, height - 20],
     ];
     sparkleCoords.forEach(([x, y]) => {
       ctx.beginPath();
-      ctx.arc(x, y, 3, 0, Math.PI * 2);
+      ctx.arc(x, y, 2.5, 0, Math.PI * 2);
       ctx.fill();
     });
 
@@ -154,9 +154,18 @@ export const ScratchCountdownSection: React.FC = () => {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
-    ctx.font = 'bold 15px "Plus Jakarta Sans", system-ui, sans-serif';
-    ctx.fillStyle = '#FFF5C0';
-    ctx.fillText('✨  SCRATCH TO REVEAL  ✨', width / 2, centerY - 32);
+    const isSmall = width < 480;
+    ctx.font = isSmall
+      ? 'bold 12px "Plus Jakarta Sans", system-ui, sans-serif'
+      : 'bold 15px "Plus Jakarta Sans", system-ui, sans-serif';
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillText('✨  SCRATCH TO REVEAL  ✨', width / 2, centerY - (isSmall ? 18 : 28));
+
+    ctx.font = isSmall
+      ? 'italic 16px "Cormorant Garamond", "Playfair Display", Georgia, serif'
+      : 'italic 21px "Cormorant Garamond", "Playfair Display", Georgia, serif';
+    ctx.fillStyle = '#E5F0FA';
+    ctx.fillText('The Countdown to Forever', width / 2, centerY + (isSmall ? 10 : 12));
 
     ctx.font = '600 32px "Playfair Display", Georgia, serif';
     ctx.fillStyle = '#FFFFFF';
@@ -321,103 +330,103 @@ export const ScratchCountdownSection: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#FFFFFF] via-[#F6F9FD]/92 to-[#FFFFFF]" />
       </div>
 
-      {/* Repeating Blue Floral Accent - Top Left */}
-      <div className="absolute top-2 left-2 w-48 sm:w-64 pointer-events-none select-none z-10 opacity-85 drop-shadow-sm">
+      {/* Repeating Blue Floral Accent - Top Left (Hidden on mobile to prevent overlapping title text) */}
+      <div className="hidden sm:block absolute top-2 left-2 w-48 sm:w-64 pointer-events-none select-none z-10 opacity-85 drop-shadow-sm">
         <img src="/assets/flower-branch-full.png" alt="" className="w-full h-auto object-contain" />
       </div>
 
       <div className="relative z-20 mx-auto max-w-4xl text-center">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <Sparkles className="w-4 h-4 text-[#D4AF37]" />
+          <Sparkles className="w-4 h-4 text-[#4B88BD]" />
           <p className="font-sans text-xs sm:text-sm tracking-[0.28em] uppercase font-bold text-[#4B709E]">
             AUSPICIOUS COUNTDOWN
           </p>
-          <Sparkles className="w-4 h-4 text-[#D4AF37]" />
+          <Sparkles className="w-4 h-4 text-[#4B88BD]" />
         </div>
 
         {/* Radiant Blue Scroll Title Effect */}
-        <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-blue-scroll">
+        <h2 className="font-serif text-2xl xs:text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-blue-scroll">
           Every Moment Closer to Forever
         </h2>
 
-        <div className="my-3 flex items-center justify-center gap-3">
-          <span className="h-[1px] w-14 bg-[#B8D1E8]" />
-          <span className="font-script text-3xl sm:text-4xl text-[#3A75A4]">with divine blessings</span>
-          <span className="h-[1px] w-14 bg-[#B8D1E8]" />
+        <div className="my-2.5 sm:my-3 flex items-center justify-center gap-2 sm:gap-3">
+          <span className="h-[1px] w-8 sm:w-14 bg-[#B8D1E8]" />
+          <span className="font-script text-2xl sm:text-4xl text-[#3A75A4]">with divine blessings</span>
+          <span className="h-[1px] w-8 sm:w-14 bg-[#B8D1E8]" />
         </div>
 
-        <p className="font-sans text-xs sm:text-base text-[#4E6F97] max-w-xl mx-auto">
-          Scratch the golden shimmer card below to unveil our live countdown to the sacred Muhurtham!
+        <p className="font-sans text-xs sm:text-base text-[#4E6F97] max-w-xl mx-auto px-2">
+          Scratch the shimmer card below to unveil our live countdown to the sacred Muhurtham!
         </p>
 
-        {/* ── HORIZONTALLY BIG INTERACTIVE SCRATCH CARD CONTAINER ── */}
-        <div ref={containerRef} className="relative mt-12 sm:mt-16 mx-auto w-full max-w-4xl lg:max-w-5xl">
+        {/* ── RESPONSIVE SCRATCH CARD CONTAINER (COMPACT & PERFECT ON MOBILE, SPACIOUS ON DESKTOP) ── */}
+        <div ref={containerRef} className="relative mt-8 sm:mt-14 mx-auto w-full max-w-sm sm:max-w-3xl md:max-w-4xl lg:max-w-5xl">
           
-          {/* Main Card (Horizontally Big & Spacious) */}
+          {/* Main Card */}
           <div
             ref={timerCardRef}
-            className="relative glass-card rounded-[32px] sm:rounded-[40px] p-8 sm:p-14 border-2 border-[#D4AF37] shadow-[0_25px_65px_rgba(22,46,90,0.16)] overflow-hidden"
+            className="relative glass-card rounded-[24px] sm:rounded-[36px] md:rounded-[40px] p-5 xs:p-6 sm:p-10 md:p-14 border-2 border-[#4B88BD] shadow-[0_20px_50px_rgba(22,46,90,0.16)] overflow-hidden"
           >
             {/* Background wash */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#F8FAFD] via-white to-[#EBF3FA] pointer-events-none" />
 
             <div className="relative z-10 flex flex-col items-center">
-              <span className="font-sans text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-[#B28A22]">
+              <span className="font-sans text-[10px] xs:text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-[#3A75A4]">
                 SACRED MUHURTHAM COUNTDOWN
               </span>
 
-              <h3 className="mt-1 font-serif text-2xl sm:text-4xl md:text-5xl text-[#162E5A] font-bold">
+              <h3 className="mt-1 font-serif text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl text-[#162E5A] font-bold text-center">
                 01 November 2026 · 5:30 AM
               </h3>
 
-              <p className="font-sans text-xs sm:text-base text-[#5D7C9F] mt-1 font-medium">
+              <p className="font-sans text-[11px] xs:text-xs sm:text-base text-[#5D7C9F] mt-1 font-medium text-center">
                 Thula Lagnam · Srikrishna Convention Hall, Bagepalli
               </p>
 
-              {/* Horizontally Big Countdown Digits Grid */}
-              <div className="grid grid-cols-4 gap-3 sm:gap-6 mt-8 sm:mt-10 w-full max-w-3xl">
+              {/* Countdown Digits Grid */}
+              <div className="grid grid-cols-4 gap-2 xs:gap-3 sm:gap-5 md:gap-6 mt-5 xs:mt-6 sm:mt-10 w-full max-w-3xl">
                 {/* Days */}
-                <div className="flex flex-col items-center justify-center p-4 sm:p-7 rounded-2xl bg-white border border-[#D0E2F2] shadow-sm">
-                  <span className="font-serif text-3xl sm:text-6xl md:text-7xl font-bold text-[#162E5A] leading-none">
+                <div className="flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-[#D0E2F2] shadow-xs">
+                  <span className="font-serif text-xl xs:text-2xl sm:text-5xl md:text-6xl font-bold text-[#162E5A] leading-none">
                     {String(timeLeft.days).padStart(2, '0')}
                   </span>
-                  <span className="mt-2.5 font-sans text-[10px] sm:text-xs uppercase font-bold tracking-widest text-[#5779A1]">
+                  <span className="mt-1 sm:mt-2 font-sans text-[8px] xs:text-[9px] sm:text-xs uppercase font-bold tracking-wider sm:tracking-widest text-[#5779A1]">
                     DAYS
                   </span>
                 </div>
 
                 {/* Hours */}
-                <div className="flex flex-col items-center justify-center p-4 sm:p-7 rounded-2xl bg-white border border-[#D0E2F2] shadow-sm">
-                  <span className="font-serif text-3xl sm:text-6xl md:text-7xl font-bold text-[#162E5A] leading-none">
+                <div className="flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-[#D0E2F2] shadow-xs">
+                  <span className="font-serif text-xl xs:text-2xl sm:text-5xl md:text-6xl font-bold text-[#162E5A] leading-none">
                     {String(timeLeft.hours).padStart(2, '0')}
                   </span>
-                  <span className="mt-2.5 font-sans text-[10px] sm:text-xs uppercase font-bold tracking-widest text-[#5779A1]">
+                  <span className="mt-1 sm:mt-2 font-sans text-[8px] xs:text-[9px] sm:text-xs uppercase font-bold tracking-wider sm:tracking-widest text-[#5779A1]">
                     HOURS
                   </span>
                 </div>
 
                 {/* Minutes */}
-                <div className="flex flex-col items-center justify-center p-4 sm:p-7 rounded-2xl bg-white border border-[#D0E2F2] shadow-sm">
-                  <span className="font-serif text-3xl sm:text-6xl md:text-7xl font-bold text-[#162E5A] leading-none">
+                <div className="flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-[#D0E2F2] shadow-xs">
+                  <span className="font-serif text-xl xs:text-2xl sm:text-5xl md:text-6xl font-bold text-[#162E5A] leading-none">
                     {String(timeLeft.minutes).padStart(2, '0')}
                   </span>
-                  <span className="mt-2.5 font-sans text-[10px] sm:text-xs uppercase font-bold tracking-widest text-[#5779A1]">
+                  <span className="mt-1 sm:mt-2 font-sans text-[8px] xs:text-[9px] sm:text-xs uppercase font-bold tracking-wider sm:tracking-widest text-[#5779A1]">
                     MINS
                   </span>
                 </div>
 
                 {/* Seconds */}
-                <div className="flex flex-col items-center justify-center p-4 sm:p-7 rounded-2xl bg-white border border-[#D0E2F2] shadow-sm">
-                  <span className="font-serif text-3xl sm:text-6xl md:text-7xl font-bold text-[#D4AF37] leading-none">
+                <div className="flex flex-col items-center justify-center p-2.5 xs:p-3 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-[#D0E2F2] shadow-xs">
+                  <span className="font-serif text-xl xs:text-2xl sm:text-5xl md:text-6xl font-bold text-[#2563EB] leading-none">
                     {String(timeLeft.seconds).padStart(2, '0')}
                   </span>
-                  <span className="mt-2.5 font-sans text-[10px] sm:text-xs uppercase font-bold tracking-widest text-[#5779A1]">
+                  <span className="mt-1 sm:mt-2 font-sans text-[8px] xs:text-[9px] sm:text-xs uppercase font-bold tracking-wider sm:tracking-widest text-[#5779A1]">
                     SECS
                   </span>
                 </div>
               </div>
 
-              <p className="mt-8 sm:mt-10 font-serif italic text-base sm:text-lg text-[#274972]">
+              <p className="mt-5 sm:mt-8 font-serif italic text-xs xs:text-sm sm:text-base md:text-lg text-[#274972] text-center">
                 &ldquo;Two hearts, one soul, beginning their forever journey.&rdquo;
               </p>
             </div>

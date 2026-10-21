@@ -113,8 +113,8 @@ export const PotdumpCarousel: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#FFFFFF] via-[#F6F9FD]/92 to-[#FFFFFF]" />
       </div>
 
-      {/* Repeating Blue Floral Accent - Top Right */}
-      <div className="absolute top-2 right-2 w-48 sm:w-64 md:w-80 pointer-events-none select-none z-10 opacity-85 drop-shadow-sm">
+      {/* Repeating Blue Floral Accent - Top Right (Hidden on mobile to avoid overlapping header) */}
+      <div className="hidden sm:block absolute top-2 right-2 w-48 sm:w-64 md:w-80 pointer-events-none select-none z-10 opacity-85 drop-shadow-sm">
         <img
           src="/assets/flower-branch-full.png"
           alt=""

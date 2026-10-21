@@ -21,8 +21,8 @@ export const VenueSection: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#FFFFFF] via-[#F6F9FD]/92 to-[#FFFFFF]" />
       </div>
 
-      {/* Repeating Blue Floral Accent - Bottom Right */}
-      <div className="absolute bottom-2 right-2 w-48 sm:w-64 md:w-80 pointer-events-none select-none z-10 opacity-85 drop-shadow-sm">
+      {/* Repeating Blue Floral Accent - Bottom Right (Hidden on mobile to avoid overlapping controls) */}
+      <div className="hidden sm:block absolute bottom-2 right-2 w-48 sm:w-64 md:w-80 pointer-events-none select-none z-10 opacity-85 drop-shadow-sm">
         <img
           src="/assets/flower-branch-full.png"
           alt=""

@@ -171,8 +171,8 @@ export const EventsSection: React.FC = () => {
       titleColor: 'text-[#5C2E00]',
       titleShadow: 'drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)]',
       gradientOverlay: 'from-[#FFF8E7] via-[#FFF3D6]/95 via-40% sm:via-48% to-transparent',
-      btnBg: 'bg-gradient-to-br from-[#D98A16] via-[#B87A0D] to-[#8C5503] hover:from-[#E59620] hover:to-[#A36605]',
-      btnRing: 'ring-[#E5B842] border-white/90',
+      btnBg: 'bg-gradient-to-br from-[#162E5A] via-[#20437E] to-[#0F2042] hover:from-[#2A558C] hover:to-[#162E5A]',
+      btnRing: 'ring-[#4B88BD] border-[#8BBBE5]',
       btnColor: 'text-white',
       dateBadge: '• FRIDAY, 30 OCT',
       topIcon: (
@@ -185,15 +185,15 @@ export const EventsSection: React.FC = () => {
       ),
     },
     'wedding-dinner': {
-      titleColor: 'text-[#FFF4D0]',
+      titleColor: 'text-white',
       titleShadow: 'drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]',
       gradientOverlay: 'from-[#170520] via-[#240833]/95 via-40% sm:via-48% to-transparent',
-      btnBg: 'bg-gradient-to-br from-[#6C1A58] via-[#4A0E3D] to-[#2E0527] hover:from-[#7E2167] hover:to-[#3D0A32]',
-      btnRing: 'ring-[#D4AF37] border-[#FFF4D0]',
-      btnColor: 'text-[#FFF4D0]',
+      btnBg: 'bg-gradient-to-br from-[#162E5A] via-[#20437E] to-[#0F2042] hover:from-[#2A558C] hover:to-[#162E5A]',
+      btnRing: 'ring-[#4B88BD] border-[#8BBBE5]',
+      btnColor: 'text-white',
       dateBadge: '• SATURDAY, 31 OCT',
       topIcon: (
-        <svg className="w-6 h-6 sm:w-9 sm:h-9 text-[#F5DE98] drop-shadow" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="w-6 h-6 sm:w-9 sm:h-9 text-[#8BBBE5] drop-shadow" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
         </svg>
       ),
@@ -202,8 +202,8 @@ export const EventsSection: React.FC = () => {
       titleColor: 'text-[#6B091B]',
       titleShadow: 'drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)]',
       gradientOverlay: 'from-[#FFF4F4] via-[#FEEBEB]/95 via-40% sm:via-48% to-transparent',
-      btnBg: 'bg-gradient-to-br from-[#96152F] via-[#7B1226] to-[#500816] hover:from-[#A81B38] hover:to-[#630A1C]',
-      btnRing: 'ring-[#E5B842] border-white/90',
+      btnBg: 'bg-gradient-to-br from-[#162E5A] via-[#20437E] to-[#0F2042] hover:from-[#2A558C] hover:to-[#162E5A]',
+      btnRing: 'ring-[#4B88BD] border-[#8BBBE5]',
       btnColor: 'text-white',
       dateBadge: '• SUNDAY, 01 NOV',
       topIcon: (
@@ -216,15 +216,15 @@ export const EventsSection: React.FC = () => {
       ),
     },
     reception: {
-      titleColor: 'text-[#FFF4D0]',
+      titleColor: 'text-white',
       titleShadow: 'drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]',
       gradientOverlay: 'from-[#0F1E3D] via-[#162E5A]/95 via-40% sm:via-48% to-transparent',
-      btnBg: 'bg-gradient-to-br from-[#162E5A] via-[#1F3D73] to-[#0E1E3D] hover:from-[#21437D] hover:to-[#162E5A]',
-      btnRing: 'ring-[#D4AF37] border-[#FFF4D0]',
-      btnColor: 'text-[#FFF4D0]',
+      btnBg: 'bg-gradient-to-br from-[#162E5A] via-[#20437E] to-[#0F2042] hover:from-[#2A558C] hover:to-[#162E5A]',
+      btnRing: 'ring-[#4B88BD] border-[#8BBBE5]',
+      btnColor: 'text-white',
       dateBadge: '• FRIDAY, 06 NOV',
       topIcon: (
-        <svg className="w-6 h-6 sm:w-9 sm:h-9 text-[#F5DE98] drop-shadow" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="w-6 h-6 sm:w-9 sm:h-9 text-[#8BBBE5] drop-shadow" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       ),
@@ -243,8 +243,8 @@ export const EventsSection: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#FFFFFF] via-[#F6F9FD]/92 to-[#FFFFFF]" />
       </div>
 
-      {/* Repeating Blue Floral Accent - Top Left */}
-      <div className="absolute top-2 left-2 w-48 sm:w-64 md:w-80 pointer-events-none select-none z-10 opacity-85 drop-shadow-sm">
+      {/* Repeating Blue Floral Accent - Top Left (Hidden on mobile to avoid overlapping header) */}
+      <div className="hidden sm:block absolute top-2 left-2 w-48 sm:w-64 md:w-80 pointer-events-none select-none z-10 opacity-85 drop-shadow-sm">
         <img
           src="/assets/flower-branch-full.png"
           alt=""
@@ -376,18 +376,23 @@ export const EventsSection: React.FC = () => {
                       {theme.topIcon}
                     </div>
 
-                    {/* Traditional Script Title (Matching Reference Image) */}
-                    <h3
-                      className={`font-script italic font-bold tracking-tight ${theme.titleColor} ${theme.titleShadow} ${
-                        event.name.length > 18
-                          ? 'text-2xl xs:text-3xl sm:text-4xl md:text-5xl leading-tight'
-                          : event.name.length > 10
-                          ? 'text-3xl xs:text-4xl sm:text-5xl md:text-6xl leading-tight'
-                          : 'text-4xl xs:text-5xl sm:text-6xl md:text-7xl leading-none'
-                      } max-w-full break-words`}
-                    >
-                      {event.name}
-                    </h3>
+                    {/* Classic Luxury Serif & Script Event Title (Matching Reference Theme) */}
+                    <div className="flex flex-col items-center">
+                      <span className="font-sans text-[9px] xs:text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-[#4B88BD] drop-shadow-xs mb-0.5 sm:mb-1">
+                        CEREMONY
+                      </span>
+                      <h3
+                        className={`font-serif font-bold tracking-tight ${theme.titleColor} ${theme.titleShadow} ${
+                          event.name.length > 18
+                            ? 'text-xl xs:text-2xl sm:text-3xl md:text-4xl leading-tight'
+                            : event.name.length > 12
+                            ? 'text-2xl xs:text-3xl sm:text-4xl md:text-5xl leading-tight'
+                            : 'text-3xl xs:text-4xl sm:text-5xl md:text-6xl leading-none'
+                        } max-w-full break-words`}
+                      >
+                        {event.name}
+                      </h3>
+                    </div>
 
                     {/* Auspicious Tilak Flourish */}
                     <img
