@@ -19,7 +19,7 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between items-center text-center bg-[#F3F8FC] overflow-hidden transition-all duration-700 ease-out select-none ${
+      className={`fixed inset-0 z-50 w-screen h-screen flex flex-col items-center text-center bg-[#F3F8FC] overflow-hidden transition-all duration-700 ease-out select-none ${
         isFading ? 'opacity-0 scale-[1.03] pointer-events-none' : 'opacity-100 scale-100'
       }`}
     >
@@ -43,10 +43,10 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#F6F9FD]/30 via-transparent to-[#F6F9FD]/20 pointer-events-none" />
       </div>
 
-      {/* ── 2. TOP TYPOGRAPHY: WEDDING NAMES & DATE (LOWERED FOR MOBILE) ── */}
-      <div className="relative z-20 pt-14 xs:pt-16 sm:pt-20 md:pt-16 px-4 flex flex-col items-center">
+      {/* ── 2. TOP TYPOGRAPHY: WEDDING NAMES & DATE (LOWERED DEEPER INTO OPEN WHITE SPACE FOR MOBILE) ── */}
+      <div className="relative z-20 pt-[14vh] xs:pt-[15vh] sm:pt-20 md:pt-16 px-4 flex flex-col items-center">
         {/* Groom Name */}
-        <h1 className="font-serif text-[40px] xs:text-[48px] sm:text-[58px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
+        <h1 className="font-serif text-[42px] xs:text-[50px] sm:text-[58px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
           Hemanth
         </h1>
 
@@ -60,7 +60,7 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         </div>
 
         {/* Bride Name */}
-        <h2 className="font-serif text-[40px] xs:text-[48px] sm:text-[58px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
+        <h2 className="font-serif text-[42px] xs:text-[50px] sm:text-[58px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
           Yashaswini
         </h2>
 
@@ -77,10 +77,10 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         </p>
       </div>
 
-      {/* ── 3. MIDDLE / LOWER SECTION: HANDS & BUTTON ── */}
-      {/* MOBILE: Elevated higher up and hands stretch edge-to-edge */}
-      <div className="md:hidden relative z-20 w-full flex flex-col items-center justify-center -mt-3 xs:-mt-2 mb-6 xs:mb-8 pointer-events-none">
-        {/* Krishna & Radha Auspicious Hands extending from both screen edges */}
+      {/* ── 3. MIDDLE / LOWER SECTION: HANDS & BUTTON (CENTERED ON MOBILE) ── */}
+      {/* MOBILE: Center hands & button in the middle of the lower half without overflowing */}
+      <div className="md:hidden relative z-20 w-full flex-1 flex flex-col items-center justify-center pointer-events-none pb-6">
+        {/* Krishna & Radha Auspicious Hands extending edge-to-edge */}
         <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4">
           <img
             src="/assets/krishna-radha-hands.png"
@@ -89,11 +89,11 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
           />
         </div>
 
-        {/* TAP TO OPEN BUTTON directly beneath the elevated hands */}
-        <div className="pointer-events-auto mt-2 xs:mt-3">
+        {/* TAP TO OPEN BUTTON directly centered under the hands */}
+        <div className="pointer-events-auto mt-2.5 xs:mt-3.5">
           <button
             onClick={handleTapToOpen}
-            className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-7 xs:px-9 py-2.5 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.35),0_6px_16px_rgba(22,46,90,0.12)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+            className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-8 xs:px-10 py-3 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.35),0_6px_16px_rgba(22,46,90,0.12)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
           >
             <span className="font-sans text-xs xs:text-sm font-bold tracking-[0.25em] uppercase text-[#162E5A] pl-1">
               TAP TO OPEN
@@ -106,7 +106,7 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
       </div>
 
       {/* DESKTOP & LAPTOP: Original bottom-positioned Tap to Open button (Hands already part of background) */}
-      <div className="hidden md:flex relative z-20 pb-12 sm:pb-16 md:pb-20 flex-col items-center">
+      <div className="hidden md:flex relative z-20 mt-auto pb-12 sm:pb-16 md:pb-20 flex-col items-center">
         <button
           onClick={handleTapToOpen}
           className="group relative inline-flex items-center justify-between gap-5 px-9 xs:px-11 py-3.5 xs:py-4 rounded-full bg-white text-[#152E5A] border-2 border-[#D4AF37] shadow-[0_12px_36px_rgba(212,175,55,0.4),0_6px_16px_rgba(22,46,90,0.14)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
