@@ -137,13 +137,13 @@ export const MeetCoupleSection: React.FC = () => {
             onClick={() => setActiveModal(groomData)}
             className="group cursor-pointer glass-card rounded-3xl p-6 sm:p-8 border-2 border-[#D0E2F2] hover:border-[#D4AF37] transition-all duration-300 hover:shadow-[0_25px_60px_rgba(22,46,90,0.16)] hover:-translate-y-2 flex flex-col items-center bg-white/95"
           >
-            {/* Square Photo Frame (Zoomed in on Groom) */}
+            {/* Square Photo Frame (Centered full portrait of Groom) */}
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 aspect-square rounded-2xl sm:rounded-3xl p-2 bg-gradient-to-tr from-[#D4AF37] via-[#94BEE5] to-[#D4AF37] shadow-lg group-hover:scale-[1.02] transition-transform duration-500">
               <div className="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white bg-[#F8FAFD]">
                 <img
                   src={groomData.photo}
                   alt={groomData.name}
-                  className="w-full h-full object-cover object-[center_10%] scale-[1.7] sm:scale-130 transition-transform duration-700 group-hover:scale-[1.8] sm:group-hover:scale-135"
+                  className="w-full h-full object-cover object-top sm:object-center transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             </div>

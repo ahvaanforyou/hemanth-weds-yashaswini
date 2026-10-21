@@ -5,13 +5,13 @@ import { weddingConfig } from '../wedding.config';
 export const HeroSection: React.FC = () => {
   return (
     <section id="hero" className="relative w-full min-h-screen lg:h-screen overflow-hidden bg-white flex flex-col lg:flex-row">
-      {/* ── 1. LEFT BACKGROUND: HIGH-RES COUPLE ON TERRACE SUNSET PHOTO (ZOOMED & CENTERED TO STAND OUT) ── */}
-      {/* On mobile: semi-elliptical arched frame matching reference image 1, zoomed in for crystal clear face view */}
-      <div className="relative w-full lg:absolute lg:inset-y-0 lg:left-0 lg:w-[70%] xl:w-[72%] h-[400px] xs:h-[440px] sm:h-[490px] lg:h-full overflow-hidden bg-[#0F1E33] shrink-0 rounded-b-[48%_38px] sm:rounded-b-[50%_60px] lg:rounded-none shadow-md lg:shadow-none z-10">
+      {/* ── 1. LEFT BACKGROUND: HIGH-RES COUPLE ON TERRACE SUNSET PHOTO (CRISP, NATURAL HD CLARITY) ── */}
+      {/* On mobile: semi-elliptical arched frame matching reference image 1, natural HD zoom for sharp facial clarity */}
+      <div className="relative w-full lg:absolute lg:inset-y-0 lg:left-0 lg:w-[70%] xl:w-[72%] h-[380px] xs:h-[420px] sm:h-[480px] lg:h-full overflow-hidden bg-[#0F1E33] shrink-0 rounded-b-[48%_38px] sm:rounded-b-[50%_60px] lg:rounded-none shadow-md lg:shadow-none z-10">
         <img
           src="/client-images/hero-couple-landscape.jpg"
           alt="Hemanth & Yashaswini"
-          className="w-full h-full object-cover object-[37%_18%] lg:object-[36%_center] scale-[1.85] xs:scale-[1.95] sm:scale-[1.65] lg:scale-115 transition-transform duration-1000 ease-out hover:scale-[2] lg:hover:scale-120"
+          className="w-full h-full object-cover object-[36%_22%] lg:object-[36%_center] scale-110 xs:scale-115 lg:scale-115 transition-transform duration-1000 ease-out hover:scale-120"
         />
         {/* Subtle sunset warmth wash */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />

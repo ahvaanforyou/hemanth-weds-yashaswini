@@ -77,10 +77,10 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         </p>
       </div>
 
-      {/* ── 3. MIDDLE SECTION: ELEVATED HANDS & BUTTON (LIFTED HIGH IN MOBILE VIEW) ── */}
-      {/* MOBILE: Placed in the comfortable upper-middle viewport */}
+      {/* ── 3. MIDDLE SECTION: ELEVATED HANDS & BUTTON (BUTTON LOWERED AS REQUESTED) ── */}
+      {/* MOBILE: Hands kept in position, button brought lower towards the mandap base */}
       <div className="md:hidden relative z-20 w-full flex flex-col items-center justify-center mt-2 xs:mt-3 pointer-events-none pb-4">
-        {/* Krishna & Radha Auspicious Hands extending edge-to-edge */}
+        {/* Krishna & Radha Auspicious Hands extending edge-to-edge (Position unchanged) */}
         <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4 -mb-1 xs:mb-0">
           <img
             src="/assets/krishna-radha-hands.png"
@@ -89,11 +89,11 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
           />
         </div>
 
-        {/* TAP TO OPEN BUTTON directly beneath the elevated hands */}
-        <div className="pointer-events-auto mt-1 xs:mt-2">
+        {/* TAP TO OPEN BUTTON brought lower below the hands */}
+        <div className="pointer-events-auto mt-6 xs:mt-8">
           <button
             onClick={handleTapToOpen}
-            className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-7 xs:px-9 py-2.5 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.4),0_6px_16px_rgba(22,46,90,0.14)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+            className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-8 xs:px-10 py-3 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.4),0_6px_16px_rgba(22,46,90,0.14)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
           >
             <span className="font-sans text-xs xs:text-sm font-bold tracking-[0.25em] uppercase text-[#162E5A] pl-1">
               TAP TO OPEN
