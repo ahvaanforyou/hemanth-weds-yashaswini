@@ -43,15 +43,15 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#F6F9FD]/30 via-transparent to-[#F6F9FD]/20 pointer-events-none" />
       </div>
 
-      {/* ── 2. TOP TYPOGRAPHY: WEDDING NAMES & DATE ── */}
-      <div className="relative z-20 pt-8 xs:pt-10 sm:pt-12 md:pt-16 px-4 flex flex-col items-center">
+      {/* ── 2. TOP TYPOGRAPHY: WEDDING NAMES & DATE (LOWERED FOR MOBILE) ── */}
+      <div className="relative z-20 pt-14 xs:pt-16 sm:pt-20 md:pt-16 px-4 flex flex-col items-center">
         {/* Groom Name */}
         <h1 className="font-serif text-[40px] xs:text-[48px] sm:text-[58px] md:text-[76px] lg:text-[84px] font-normal md:font-medium tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
           Hemanth
         </h1>
 
         {/* weds with swashes */}
-        <div className="my-1 xs:my-1.5 sm:my-2 flex items-center justify-center gap-2.5 sm:gap-4 w-full">
+        <div className="my-1.5 xs:my-2 sm:my-2.5 flex items-center justify-center gap-2.5 sm:gap-4 w-full">
           <span className="h-[1.5px] w-12 xs:w-16 sm:w-24 md:w-36 bg-gradient-to-r from-transparent via-[#4B88BD] to-[#4B88BD] rounded-full" />
           <span className="font-script text-2xl xs:text-3xl sm:text-4xl md:text-6xl text-[#3A75A4] italic -mt-1 select-none">
             weds
@@ -65,7 +65,7 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
         </h2>
 
         {/* Hairline with center ornament */}
-        <div className="my-2 xs:my-2.5 sm:my-3 flex items-center justify-center gap-2.5 sm:gap-3 text-[#B28A22]">
+        <div className="my-2.5 xs:my-3 sm:my-3.5 flex items-center justify-center gap-2.5 sm:gap-3 text-[#B28A22]">
           <span className="h-[1px] w-8 xs:w-12 sm:w-16 bg-[#C5DAEE]" />
           <span className="text-[#3A75A4] text-[10px] xs:text-xs">✣</span>
           <span className="h-[1px] w-8 xs:w-12 sm:w-16 bg-[#C5DAEE]" />
@@ -78,8 +78,8 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
       </div>
 
       {/* ── 3. MIDDLE / LOWER SECTION: HANDS & BUTTON ── */}
-      {/* MOBILE: Hands stretch flush edge-to-edge across both screen borders and elevated higher up */}
-      <div className="md:hidden relative z-20 w-full flex flex-col items-center justify-center my-auto pb-4 pointer-events-none">
+      {/* MOBILE: Elevated higher up and hands stretch edge-to-edge */}
+      <div className="md:hidden relative z-20 w-full flex flex-col items-center justify-center -mt-3 xs:-mt-2 mb-6 xs:mb-8 pointer-events-none">
         {/* Krishna & Radha Auspicious Hands extending from both screen edges */}
         <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4">
           <img
