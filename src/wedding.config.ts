@@ -136,16 +136,6 @@ export const weddingConfig = {
       caption: 'Two Hearts, One Soul',
       tag: 'Together Always',
     },
-    {
-      image: '/client-images/gallery-1.jpg',
-      caption: 'The Promise of Forever',
-      tag: 'Golden Memories',
-    },
-    {
-      image: '/client-images/gallery-2.jpg',
-      caption: 'Eyes Full of Dreams',
-      tag: 'Sweet Anticipation',
-    },
   ],
 
   venues: [

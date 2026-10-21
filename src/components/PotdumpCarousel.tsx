@@ -25,7 +25,7 @@ export const PotdumpCarousel: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Automatic carousel rotation every 3.2 seconds (pauses on hover or when lightbox is open)
+  // Automatic carousel rotation every 3.2 seconds
   useEffect(() => {
     if (isPaused || lightboxImg || totalPhotos <= 1) return;
 
@@ -60,7 +60,7 @@ export const PotdumpCarousel: React.FC = () => {
   const nextPhoto = () => setActiveIndex((prev) => (prev + 1) % totalPhotos);
   const prevPhoto = () => setActiveIndex((prev) => (prev - 1 + totalPhotos) % totalPhotos);
 
-  // Exact 3D Wheel Transform from Hitesh Wedding (with infinite circular loop)
+  // Exact 3D Wheel Transform (Circular loop)
   const getCardTransform = (idx: number, total: number) => {
     let diff = idx - activeIndex;
     while (diff > total / 2) diff -= total;
@@ -76,18 +76,18 @@ export const PotdumpCarousel: React.FC = () => {
     } else if (diff === -1) {
       return {
         transform: isMobile
-          ? 'translate(-50%, -50%) translate3d(-26%, 0, -60px) rotateY(16deg) scale(0.88)'
-          : 'translate(-50%, -50%) translate3d(-34%, 0, -120px) rotateY(20deg) scale(0.90)',
-        opacity: 0.42,
+          ? 'translate(-50%, -50%) translate3d(-38%, 0, -60px) rotateY(16deg) scale(0.88)'
+          : 'translate(-50%, -50%) translate3d(-52%, 0, -120px) rotateY(20deg) scale(0.90)',
+        opacity: 0.45,
         zIndex: 10,
         pointerEvents: 'auto' as const,
       };
     } else if (diff === 1) {
       return {
         transform: isMobile
-          ? 'translate(-50%, -50%) translate3d(26%, 0, -60px) rotateY(-16deg) scale(0.88)'
-          : 'translate(-50%, -50%) translate3d(34%, 0, -120px) rotateY(-20deg) scale(0.90)',
-        opacity: 0.42,
+          ? 'translate(-50%, -50%) translate3d(38%, 0, -60px) rotateY(-16deg) scale(0.88)'
+          : 'translate(-50%, -50%) translate3d(52%, 0, -120px) rotateY(-20deg) scale(0.90)',
+        opacity: 0.45,
         zIndex: 10,
         pointerEvents: 'auto' as const,
       };
@@ -142,10 +142,10 @@ export const PotdumpCarousel: React.FC = () => {
         </div>
 
         <p className="font-sans text-xs sm:text-base text-[#5578A0] max-w-md mx-auto">
-          A photo dump of candid laughter, stolen glances, and our sweetest memories together.
+          Candid laughter, stolen glances, and our sweetest memories together. Tap any photo to enlarge.
         </p>
 
-        {/* ── 3D WHEEL CAROUSEL STAGE (EXACTLY MATCHING HITESH WEDDING TEMPLATE) ── */}
+        {/* ── 3D LARGE-FORMAT IMAGES CAROUSEL (NO CARD BOXES, NO TEXT OVERLAYS) ── */}
         <div
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
@@ -157,7 +157,7 @@ export const PotdumpCarousel: React.FC = () => {
             setIsPaused(false);
             handleTouchEnd(e);
           }}
-          className="relative mt-8 sm:mt-12 h-[340px] xs:h-[380px] sm:h-[480px] md:h-[530px] w-full flex items-center justify-center select-none"
+          className="relative mt-8 sm:mt-14 h-[420px] xs:h-[480px] sm:h-[560px] md:h-[640px] w-full flex items-center justify-center select-none"
           style={{ perspective: '1200px', transformStyle: 'preserve-3d' }}
         >
           {/* Previous Photo Navigation Button */}
@@ -165,7 +165,7 @@ export const PotdumpCarousel: React.FC = () => {
             type="button"
             onClick={prevPhoto}
             aria-label="Previous photo"
-            className="absolute left-1 sm:left-4 z-40 flex h-9 w-9 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#FAC12C] text-[#2B1207] shadow-[0_4px_16px_rgba(43,18,7,0.35)] border border-[#FFFDF5] backdrop-blur-md transition-all duration-300 hover:bg-[#FFFDF5] hover:text-[#2B1207] hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute left-2 sm:left-6 z-40 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#FAC12C] text-[#2B1207] shadow-[0_4px_16px_rgba(43,18,7,0.35)] border border-[#FFFDF5] backdrop-blur-md transition-all duration-300 hover:bg-[#FFFDF5] hover:text-[#2B1207] hover:scale-110 active:scale-95 cursor-pointer"
           >
             <ChevronLeft className="h-5 w-5 sm:h-7 sm:w-7" />
           </button>
@@ -175,12 +175,12 @@ export const PotdumpCarousel: React.FC = () => {
             type="button"
             onClick={nextPhoto}
             aria-label="Next photo"
-            className="absolute right-1 sm:right-4 z-40 flex h-9 w-9 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#FAC12C] text-[#2B1207] shadow-[0_4px_16px_rgba(43,18,7,0.35)] border border-[#FFFDF5] backdrop-blur-md transition-all duration-300 hover:bg-[#FFFDF5] hover:text-[#2B1207] hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute right-2 sm:right-6 z-40 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#FAC12C] text-[#2B1207] shadow-[0_4px_16px_rgba(43,18,7,0.35)] border border-[#FFFDF5] backdrop-blur-md transition-all duration-300 hover:bg-[#FFFDF5] hover:text-[#2B1207] hover:scale-110 active:scale-95 cursor-pointer"
           >
             <ChevronRight className="h-5 w-5 sm:h-7 sm:w-7" />
           </button>
 
-          {/* Photos on the 3D Wheel with Smooth Spring Animation */}
+          {/* Large-Format Couple Images Moving in 3D Carousel Motion */}
           {images.map((item, idx) => {
             const style = getCardTransform(idx, images.length);
             const isCenter = idx === activeIndex;
@@ -203,69 +203,27 @@ export const PotdumpCarousel: React.FC = () => {
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden',
                 }}
-                className={`group absolute top-1/2 left-1/2 w-[92%] xs:w-[90%] sm:w-[86%] md:w-[88%] max-w-5xl h-[300px] xs:h-[340px] sm:h-[440px] md:h-[490px] overflow-hidden rounded-[24px] sm:rounded-[36px] border-[2.5px] sm:border-[3px] border-[#D4AF37] ring-1 ring-[#FFF2B2]/60 shadow-[0_16px_44px_rgba(212,175,55,0.28)] bg-[#0A1424] cursor-pointer ${
-                  isCenter ? 'hover:shadow-[0_24px_60px_rgba(212,175,55,0.45)]' : 'hover:opacity-75'
+                className={`group absolute top-1/2 left-1/2 w-[76%] xs:w-[72%] sm:w-[420px] md:w-[460px] lg:w-[480px] h-[390px] xs:h-[450px] sm:h-[530px] md:h-[600px] lg:h-[620px] overflow-hidden rounded-[26px] sm:rounded-[36px] border-[2.5px] sm:border-[3.5px] border-[#D4AF37] shadow-[0_20px_50px_rgba(22,46,90,0.28)] bg-white cursor-pointer ${
+                  isCenter ? 'hover:shadow-[0_26px_65px_rgba(212,175,55,0.45)] ring-2 ring-[#D4AF37]/50' : 'hover:opacity-75'
                 }`}
               >
-                {/* Ambient Blurred Backdrop Matching the Photo Palette */}
+                {/* Large Format Pristine Photo */}
                 <img
                   src={item.image}
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none"
+                  alt={item.caption}
+                  loading="eager"
+                  className="w-full h-full object-cover object-[center_20%] sm:object-center transition-transform duration-700 ease-out group-hover:scale-105"
                 />
 
-                {/* Pristine Full Photo (Uncropped - Complete Size Visible) */}
-                <div className="relative z-10 w-full h-full flex items-center justify-center p-2 sm:p-3">
-                  <img
-                    src={item.image}
-                    alt={item.caption}
-                    loading="eager"
-                    className="max-w-full max-h-full object-contain rounded-[18px] sm:rounded-[28px] transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                  />
-                </div>
-
-                {/* Subtle Gradient Overlay for Text Legibility at Bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none z-20" />
-
-                {/* Inner Gold Border Frame */}
-                <div className="pointer-events-none absolute inset-2 sm:inset-3.5 rounded-[18px] sm:rounded-[30px] border border-[#D4AF37]/50 z-20" />
-
-                {/* Corner Floral Accent */}
-                <img
-                  src="/assets/flower-branch-full.png"
-                  alt=""
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -bottom-4 -right-4 w-32 sm:w-52 h-auto opacity-50 sm:opacity-65 select-none object-contain rotate-180 z-20"
-                />
-
-                {/* Top Corner Badge: Photo counter */}
-                <div className="absolute right-2.5 top-2.5 sm:right-5 sm:top-5 z-30 flex items-center gap-1 sm:gap-1.5 rounded-full bg-black/60 px-2.5 py-0.5 sm:px-4 sm:py-2 font-sans text-[8.5px] xs:text-[9.5px] sm:text-xs uppercase tracking-wider text-white font-bold backdrop-blur-md border border-white/20 shadow-md">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#D4AF37]" />
-                  {idx + 1} OF {images.length}
-                </div>
-
-                {/* Bottom Overlay Info */}
-                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-8 sm:right-8 text-left text-white z-30 flex items-end justify-between pointer-events-none">
-                  <div>
-                    <span className="px-3 py-1 rounded-full bg-[#162E5A]/90 border border-[#D4AF37] text-[10px] sm:text-xs font-sans font-bold tracking-widest uppercase text-[#F5E4B2]">
-                      {item.tag}
-                    </span>
-                    <p className="mt-2 font-serif text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold drop-shadow-md">
-                      {item.caption}
-                    </p>
-                  </div>
-                  <span className="hidden sm:inline-block font-sans text-xs tracking-wider text-[#D4AF37] font-semibold">
-                    Tap to expand ↗
-                  </span>
-                </div>
+                {/* Subtle Inner Gold Inset Frame */}
+                <div className="pointer-events-none absolute inset-2 sm:inset-3 rounded-[20px] sm:rounded-[30px] border border-white/60 z-10" />
               </div>
             );
           })}
         </div>
 
-        {/* Carousel Wheel Dots & Swipe Hint */}
-        <div className="mt-6 sm:mt-8 flex flex-col items-center gap-2">
+        {/* Carousel Wheel Dots */}
+        <div className="mt-6 sm:mt-10 flex flex-col items-center gap-2">
           <div className="flex items-center justify-center gap-2.5">
             {images.map((_, i) => (
               <button
@@ -282,12 +240,12 @@ export const PotdumpCarousel: React.FC = () => {
             ))}
           </div>
           <p className="font-sans text-[10px] sm:text-xs tracking-[0.25em] uppercase font-bold text-[#4B709E] mt-1">
-            SWIPE OR CLICK ARROWS TO SPIN • TAP CARD TO ENLARGE
+            SWIPE OR CLICK ARROWS TO SPIN • TAP PHOTO TO ENLARGE
           </p>
         </div>
       </div>
 
-      {/* Lightbox Zoom Modal */}
+      {/* Lightbox Zoom Modal (Uncropped Photo View) */}
       {lightboxImg && (
         <div
           onClick={() => setLightboxImg(null)}
@@ -295,9 +253,9 @@ export const PotdumpCarousel: React.FC = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-5xl max-h-[90vh] rounded-3xl overflow-hidden border-2 border-[#D4AF37] shadow-2xl"
+            className="relative max-w-4xl max-h-[92vh] rounded-3xl overflow-hidden border-2 border-[#D4AF37] shadow-2xl flex items-center justify-center bg-black/60 p-1"
           >
-            <img src={lightboxImg} alt="Enlarged gallery view" className="w-full h-full object-contain" />
+            <img src={lightboxImg} alt="Enlarged gallery view" className="max-w-full max-h-[88vh] object-contain rounded-2xl" />
             <button
               onClick={() => setLightboxImg(null)}
               aria-label="Close image"

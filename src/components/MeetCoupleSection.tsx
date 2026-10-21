@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Heart, Sparkles } from 'lucide-react';
+import { X, Heart } from 'lucide-react';
 import { weddingConfig } from '../wedding.config';
 import { ScrollFadeSection } from './ScrollFadeSection';
 
@@ -72,7 +72,7 @@ export const MeetCoupleSection: React.FC = () => {
       </div>
 
       <div className="relative z-20 mx-auto max-w-5xl text-center">
-        {/* Header without the mini star symbol */}
+        {/* Header */}
         <p className="font-sans text-xs sm:text-sm tracking-[0.32em] uppercase font-bold text-[#4B709E] mb-2">
           TOGETHER WITH THEIR FAMILIES
         </p>
@@ -92,97 +92,97 @@ export const MeetCoupleSection: React.FC = () => {
           Click on each portrait to view their details and parentage.
         </p>
 
-        {/* ── LARGER BRIDE & GROOM CARDS ── */}
+        {/* ── BRIDE & GROOM CARDS WITH SQUARE FRAMES & NO STAR ICONS ── */}
         <div className="mt-14 sm:mt-18 grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 max-w-4xl mx-auto">
           
           {/* BRIDE CARD */}
           <div
             onClick={() => setActiveModal(brideData)}
-            className="group cursor-pointer glass-card rounded-3xl p-8 sm:p-10 border-2 border-[#D0E2F2] hover:border-[#D4AF37] transition-all duration-300 hover:shadow-[0_25px_60px_rgba(22,46,90,0.16)] hover:-translate-y-2 flex flex-col items-center"
+            className="group cursor-pointer glass-card rounded-3xl p-6 sm:p-8 border-2 border-[#D0E2F2] hover:border-[#D4AF37] transition-all duration-300 hover:shadow-[0_25px_60px_rgba(22,46,90,0.16)] hover:-translate-y-2 flex flex-col items-center bg-white/95"
           >
-            {/* Extra Large Portrait Container */}
-            <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full p-2.5 bg-gradient-to-tr from-[#D4AF37] via-[#94BEE5] to-[#D4AF37] shadow-lg group-hover:scale-105 transition-transform duration-500">
-              <div className="w-full h-full rounded-full overflow-hidden border-4 border-white bg-[#EBF3FA]">
+            {/* Square Photo Frame (No star icon) */}
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 aspect-square rounded-2xl sm:rounded-3xl p-2 bg-gradient-to-tr from-[#D4AF37] via-[#94BEE5] to-[#D4AF37] shadow-lg group-hover:scale-[1.02] transition-transform duration-500">
+              <div className="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white bg-[#F8FAFD]">
                 <img
                   src={brideData.photo}
                   alt={brideData.name}
-                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
                 />
-              </div>
-              <div className="absolute bottom-2 right-4 w-11 h-11 rounded-full bg-[#162E5A] text-[#D4AF37] flex items-center justify-center border-2 border-white shadow-md group-hover:scale-110 transition-transform">
-                <Sparkles className="w-5 h-5" />
               </div>
             </div>
 
-            <span className="mt-7 font-sans text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-[#B28A22]">
-              {brideData.role}
-            </span>
+            {/* Information Below the Square Frame */}
+            <div className="mt-6 flex flex-col items-center text-center w-full">
+              <span className="font-sans text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-[#B28A22]">
+                {brideData.role}
+              </span>
 
-            <h3 className="mt-1.5 font-serif text-3xl sm:text-4xl font-semibold text-blue-scroll">
-              {brideData.name}
-            </h3>
+              <h3 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold text-blue-scroll">
+                {brideData.name}
+              </h3>
 
-            <p className="mt-2.5 font-sans text-xs sm:text-base text-[#4E7199] font-medium leading-relaxed max-w-xs">
-              {brideData.parents}
-            </p>
+              <p className="mt-2 font-sans text-xs sm:text-base text-[#4E7199] font-medium leading-relaxed max-w-xs">
+                {brideData.parents}
+              </p>
 
-            <span className="mt-5 inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#EBF3FA] text-xs sm:text-sm font-semibold text-[#162E5A] group-hover:bg-[#162E5A] group-hover:text-white transition-all shadow-xs">
-              <span>View Details</span>
-              <span>&rarr;</span>
-            </span>
+              <span className="mt-5 inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#EBF3FA] text-xs sm:text-sm font-semibold text-[#162E5A] group-hover:bg-[#162E5A] group-hover:text-white transition-all shadow-xs">
+                <span>View Details</span>
+                <span>&rarr;</span>
+              </span>
+            </div>
           </div>
 
           {/* GROOM CARD */}
           <div
             onClick={() => setActiveModal(groomData)}
-            className="group cursor-pointer glass-card rounded-3xl p-8 sm:p-10 border-2 border-[#D0E2F2] hover:border-[#D4AF37] transition-all duration-300 hover:shadow-[0_25px_60px_rgba(22,46,90,0.16)] hover:-translate-y-2 flex flex-col items-center"
+            className="group cursor-pointer glass-card rounded-3xl p-6 sm:p-8 border-2 border-[#D0E2F2] hover:border-[#D4AF37] transition-all duration-300 hover:shadow-[0_25px_60px_rgba(22,46,90,0.16)] hover:-translate-y-2 flex flex-col items-center bg-white/95"
           >
-            {/* Extra Large Portrait Container */}
-            <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full p-2.5 bg-gradient-to-tr from-[#D4AF37] via-[#94BEE5] to-[#D4AF37] shadow-lg group-hover:scale-105 transition-transform duration-500">
-              <div className="w-full h-full rounded-full overflow-hidden border-4 border-white bg-[#EBF3FA]">
+            {/* Square Photo Frame (No star icon) */}
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 aspect-square rounded-2xl sm:rounded-3xl p-2 bg-gradient-to-tr from-[#D4AF37] via-[#94BEE5] to-[#D4AF37] shadow-lg group-hover:scale-[1.02] transition-transform duration-500">
+              <div className="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white bg-[#F8FAFD]">
                 <img
                   src={groomData.photo}
                   alt={groomData.name}
-                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover object-[center_15%] transition-transform duration-700 group-hover:scale-105"
                 />
-              </div>
-              <div className="absolute bottom-2 right-4 w-11 h-11 rounded-full bg-[#162E5A] text-[#D4AF37] flex items-center justify-center border-2 border-white shadow-md group-hover:scale-110 transition-transform">
-                <Sparkles className="w-5 h-5" />
               </div>
             </div>
 
-            <span className="mt-7 font-sans text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-[#B28A22]">
-              {groomData.role}
-            </span>
+            {/* Information Below the Square Frame */}
+            <div className="mt-6 flex flex-col items-center text-center w-full">
+              <span className="font-sans text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-[#B28A22]">
+                {groomData.role}
+              </span>
 
-            <h3 className="mt-1.5 font-serif text-3xl sm:text-4xl font-semibold text-blue-scroll">
-              {groomData.name}
-            </h3>
+              <h3 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold text-blue-scroll">
+                {groomData.name}
+              </h3>
 
-            <p className="mt-2.5 font-sans text-xs sm:text-base text-[#4E7199] font-medium leading-relaxed max-w-xs">
-              {groomData.parents}
-            </p>
+              <p className="mt-2 font-sans text-xs sm:text-base text-[#4E7199] font-medium leading-relaxed max-w-xs">
+                {groomData.parents}
+              </p>
 
-            <span className="mt-5 inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#EBF3FA] text-xs sm:text-sm font-semibold text-[#162E5A] group-hover:bg-[#162E5A] group-hover:text-white transition-all shadow-xs">
-              <span>View Details</span>
-              <span>&rarr;</span>
-            </span>
+              <span className="mt-5 inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#EBF3FA] text-xs sm:text-sm font-semibold text-[#162E5A] group-hover:bg-[#162E5A] group-hover:text-white transition-all shadow-xs">
+                <span>View Details</span>
+                <span>&rarr;</span>
+              </span>
+            </div>
           </div>
 
         </div>
       </div>
 
-      {/* ── POP-UP MODAL DETAILS WITH CROSS BUTTON ── */}
+      {/* ── POP-UP MODAL DETAILS (EXPANDED PHOTO UNCUT & FULLY VISIBLE) ── */}
       {activeModal && (
         <div
           onClick={() => setActiveModal(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/65 backdrop-blur-md p-4 animate-fade-in"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-lg rounded-3xl bg-white border-2 border-[#D4AF37] shadow-[0_25px_60px_rgba(22,46,90,0.35)] overflow-hidden animate-fade-in-up"
+            className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto rounded-3xl bg-white border-2 border-[#D4AF37] shadow-[0_25px_70px_rgba(22,46,90,0.35)] animate-fade-in-up"
           >
-            {/* Top decorative blue floral corner */}
+            {/* Top decorative floral corner */}
             <div className="absolute top-2 right-2 w-36 pointer-events-none select-none z-10 opacity-80">
               <img src="/assets/flower-branch-full.png" alt="" className="w-full h-auto object-contain scale-x-[-1]" />
             </div>
@@ -191,18 +191,19 @@ export const MeetCoupleSection: React.FC = () => {
             <button
               onClick={() => setActiveModal(null)}
               aria-label="Close details"
-              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/90 border border-[#D0E2F2] flex items-center justify-center text-[#162E5A] hover:bg-[#162E5A] hover:text-white transition-all duration-200 shadow-md cursor-pointer"
+              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/95 border border-[#D0E2F2] flex items-center justify-center text-[#162E5A] hover:bg-[#162E5A] hover:text-white transition-all duration-200 shadow-md cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
 
-            {/* Modal Body */}
-            <div className="p-7 sm:p-10 flex flex-col items-center text-center">
-              <div className="w-36 h-36 rounded-full p-1.5 bg-gradient-to-tr from-[#D4AF37] to-[#80A8D2] shadow-md mb-4">
+            {/* Modal Body with Uncut Photo */}
+            <div className="p-6 sm:p-8 flex flex-col items-center text-center">
+              {/* Uncut, Complete Aspect Ratio Photo */}
+              <div className="w-full max-w-[280px] sm:max-w-[320px] h-[300px] sm:h-[350px] rounded-2xl overflow-hidden border-2 border-[#D4AF37] bg-[#F8FAFD] shadow-md mb-4 p-1 flex items-center justify-center">
                 <img
                   src={activeModal.photo}
                   alt={activeModal.name}
-                  className="w-full h-full rounded-full object-cover"
+                  className="w-full h-full object-contain rounded-xl"
                 />
               </div>
 
@@ -225,7 +226,7 @@ export const MeetCoupleSection: React.FC = () => {
                 {activeModal.parents}
               </p>
 
-              {/* Bio 1-2 lines */}
+              {/* Bio */}
               <p className="mt-4 font-sans text-sm sm:text-base text-[#4E7199] leading-relaxed">
                 {activeModal.bio}
               </p>
@@ -237,7 +238,7 @@ export const MeetCoupleSection: React.FC = () => {
 
               <button
                 onClick={() => setActiveModal(null)}
-                className="mt-7 px-8 py-2.5 rounded-full bg-[#162E5A] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#284E88] transition-colors cursor-pointer shadow-md"
+                className="mt-6 px-8 py-2.5 rounded-full bg-[#162E5A] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#284E88] transition-colors cursor-pointer shadow-md"
               >
                 Close
               </button>
