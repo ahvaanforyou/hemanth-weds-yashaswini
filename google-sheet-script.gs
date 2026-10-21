@@ -199,8 +199,8 @@ function setupSheet() {
   sheet.setColumnWidth(8, 150); // Reception
   sheet.setColumnWidth(9, 300); // Wishes
 
-  // Set gridlines
-  sheet.setShowGridLines(true);
+  // Ensure gridlines are visible
+  sheet.setHideGridlines(false);
 }
 
 /**
