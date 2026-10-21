@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-royal: #162E5A;
+  --secondary-royal: #284E88;
+  --accent-gold: #D4AF37;
+  --bg-pastel: #F5F9FD;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #F6F9FD;
+    color: #162E5A;
+    overflow-x: hidden;
+  }
+
+  /* When locked for tap to open */
+  body.door-locked {
+    overflow: hidden !important;
+    height: 100vh !important;
+  }
+}
+
+/* Radiant blue text shimmer effect as requested */
+.text-blue-scroll {
+  background: linear-gradient(120deg, #162E5A 15%, #2563EB 50%, #162E5A 85%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blueScrollShimmer 5s ease-in-out infinite;
+}
+
+@keyframes blueScrollShimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Elegant script flourish lines */
+.script-weds {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.script-weds::before,
+.script-weds::after {
+  content: '';
+  display: inline-block;
+  width: 44px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #568CBF, #568CBF);
+  margin: 0 10px;
+  border-radius: 999px;
+}
+
+.script-weds::after {
+  background: linear-gradient(90deg, #568CBF, #568CBF, transparent);
+}
+
+@media (min-width: 640px) {
+  .script-weds::before,
+  .script-weds::after {
+    width: 64px;
+  }
+}
+
+/* Gold foil shimmer */
+.gold-shimmer {
+  background: linear-gradient(120deg, #D4AF37 0%, #FFF5C0 50%, #B38B24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Frosted glass cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(208, 226, 242, 0.85);
+  box-shadow: 0 16px 50px -10px rgba(22, 46, 90, 0.1);
+}
+
+/* Custom scrollbars hidden */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 999px;
+}
