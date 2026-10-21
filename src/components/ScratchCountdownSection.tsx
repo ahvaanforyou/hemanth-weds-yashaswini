@@ -149,31 +149,33 @@ export const ScratchCountdownSection: React.FC = () => {
       ctx.fill();
     });
 
-    // Centered Call to Action Text
+    // Centered Call to Action Text (Clean, elegant, non-overlapping hierarchy)
     const centerY = height / 2;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
     const isSmall = width < 480;
+    
+    // 1. Sparkle Tagline Kicker
     ctx.font = isSmall
-      ? 'bold 12px "Plus Jakarta Sans", system-ui, sans-serif'
-      : 'bold 15px "Plus Jakarta Sans", system-ui, sans-serif';
-    ctx.fillStyle = '#FFFFFF';
-    ctx.fillText('✨  SCRATCH TO REVEAL  ✨', width / 2, centerY - (isSmall ? 18 : 28));
+      ? 'bold 11px "Plus Jakarta Sans", system-ui, sans-serif'
+      : 'bold 13px "Plus Jakarta Sans", system-ui, sans-serif';
+    ctx.fillStyle = '#FAC12C';
+    ctx.fillText('✨  SCRATCH TO REVEAL  ✨', width / 2, centerY - (isSmall ? 26 : 38));
 
+    // 2. Main Title: The Countdown to Forever
     ctx.font = isSmall
-      ? 'italic 16px "Cormorant Garamond", "Playfair Display", Georgia, serif'
-      : 'italic 21px "Cormorant Garamond", "Playfair Display", Georgia, serif';
-    ctx.fillStyle = '#E5F0FA';
-    ctx.fillText('The Countdown to Forever', width / 2, centerY + (isSmall ? 10 : 12));
-
-    ctx.font = '600 32px "Playfair Display", Georgia, serif';
+      ? 'bold 20px "Playfair Display", Georgia, serif'
+      : 'bold 30px "Playfair Display", Georgia, serif';
     ctx.fillStyle = '#FFFFFF';
-    ctx.fillText('The Countdown to Forever', width / 2, centerY + 6);
+    ctx.fillText('The Countdown to Forever', width / 2, centerY + (isSmall ? 2 : 2));
 
-    ctx.font = 'italic 15px "Plus Jakarta Sans", system-ui, sans-serif';
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
-    ctx.fillText('Swipe or drag finger / mouse to unveil the timer', width / 2, centerY + 42);
+    // 3. Subtitle / Instruction
+    ctx.font = isSmall
+      ? 'italic 11px "Plus Jakarta Sans", system-ui, sans-serif'
+      : 'italic 14px "Plus Jakarta Sans", system-ui, sans-serif';
+    ctx.fillStyle = 'rgba(230, 240, 255, 0.9)';
+    ctx.fillText('Swipe or drag finger / mouse to unveil the timer', width / 2, centerY + (isSmall ? 28 : 38));
 
     ctx.restore();
 
