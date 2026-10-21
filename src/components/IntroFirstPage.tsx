@@ -45,8 +45,8 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
 
       {/* ── 2. MOBILE LAYOUT (PRECISELY POSITIONED PER ANNOTATION) ── */}
       <div className="md:hidden relative z-20 w-full h-[100dvh] flex flex-col items-center pointer-events-none">
-        {/* Top Typography: nestled gracefully inside upper arch */}
-        <div className="pt-5 xs:pt-7 sm:pt-8 px-4 flex flex-col items-center shrink-0">
+        {/* Top Typography: nestled gracefully inside upper arch, lowered into clear white area */}
+        <div className="pt-12 xs:pt-16 sm:pt-20 px-4 flex flex-col items-center shrink-0">
           <h1 className="font-serif text-[38px] xs:text-[44px] font-normal tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
             Hemanth
           </h1>
@@ -74,8 +74,8 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
           </p>
         </div>
 
-        {/* Auspicious Hands: elevated directly beneath the date into the upper circle */}
-        <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4 -mt-1 xs:-mt-2">
+        {/* Auspicious Hands: lowered into the open white space */}
+        <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4 mt-4 xs:mt-6">
           <img
             src="/assets/krishna-radha-hands.png"
             alt="Divine Hands of Love & Companionship"
