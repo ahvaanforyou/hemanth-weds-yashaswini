@@ -29,10 +29,10 @@ export const weddingConfig = {
     // and update the paths or framing position below!
     // =========================================================================
     bridePhoto: '/client-images/bride.jpg',
-    bridePhotoPosition: 'center', // e.g., 'center', 'top', 'center 30%'
+    bridePhotoPosition: 'center 20%',
 
     groomPhoto: '/client-images/groom.jpg',
-    groomPhotoPosition: 'center', // e.g., 'center', 'top', 'center 30%'
+    groomPhotoPosition: 'center 15%',
 
     bride: 'P. Yashaswini',
     brideShort: 'Yashaswini',
