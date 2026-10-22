@@ -6,8 +6,8 @@ export const HeroSection: React.FC = () => {
   return (
     <section id="hero" className="relative w-full min-h-screen lg:h-screen overflow-hidden bg-white flex flex-col lg:flex-row">
       {/* ── 1. LEFT BACKGROUND: HIGH-RES COUPLE ON TERRACE SUNSET PHOTO (EXPANDED VERTICALLY PER REFERENCE) ── */}
-      {/* On mobile: deep parabolic arched frame taking ~52% height matching reference mockup */}
-      <div className="relative w-full lg:absolute lg:inset-y-0 lg:left-0 lg:w-[70%] xl:w-[72%] h-[460px] xs:h-[500px] sm:h-[540px] lg:h-full overflow-hidden bg-[#0F1E33] shrink-0 rounded-b-[50%_75px] xs:rounded-b-[50%_90px] sm:rounded-b-[50%_110px] lg:rounded-none shadow-md lg:shadow-none z-10">
+      {/* On mobile: deep parabolic arched frame taking ~52% height, sitting on TOP of hanging charm */}
+      <div className="relative w-full lg:absolute lg:inset-y-0 lg:left-0 lg:w-[70%] xl:w-[72%] h-[460px] xs:h-[500px] sm:h-[540px] lg:h-full overflow-hidden bg-[#0F1E33] shrink-0 rounded-b-[50%_75px] xs:rounded-b-[50%_90px] sm:rounded-b-[50%_110px] lg:rounded-none shadow-md lg:shadow-none z-30 lg:z-10">
         <img
           src="/client-images/hero-couple-landscape.jpg"
           alt="Hemanth & Yashaswini"
@@ -17,9 +17,9 @@ export const HeroSection: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
       </div>
 
-      {/* ── HANGING CHARM ELEMENT (BIGGER & CONNECTED TO IMAGE BORDER) ── */}
-      {/* Mobile: Anchored seamlessly to the right curved edge of the arched photo, enlarged per reference */}
-      <div className="lg:hidden absolute top-[415px] xs:top-[450px] sm:top-[485px] right-0.5 xs:right-1.5 sm:right-3 w-24 xs:w-28 sm:w-32 z-30 pointer-events-none select-none drop-shadow-md">
+      {/* ── HANGING CHARM ELEMENT (UNDER HERO IMAGE ARCH BORDER) ── */}
+      {/* Mobile: Tucked underneath the hero arch edge (image is top layer, hanging is bottom layer) */}
+      <div className="lg:hidden absolute top-[395px] xs:top-[430px] sm:top-[465px] right-0.5 xs:right-1.5 sm:right-3 w-24 xs:w-28 sm:w-32 z-20 pointer-events-none select-none drop-shadow-md">
         <img
           src="/assets/hanging-charm.png"
           alt="Auspicious Hanging Charm"
@@ -65,7 +65,7 @@ export const HeroSection: React.FC = () => {
 
       {/* ── 4. RIGHT CONTENT AREA: TYPOGRAPHY & 3-COLUMN CARD ── */}
       {/* On mobile: full vertical flow with typography centered and 3-column card resting at the bottom */}
-      <div className="relative z-20 w-full lg:w-[49%] xl:w-[48%] lg:ml-auto min-h-[460px] xs:min-h-[500px] lg:h-full flex flex-col justify-between items-center text-center px-4 xs:px-6 sm:px-10 lg:px-12 pt-3 pb-6 xs:pb-8 sm:py-10 lg:py-12 bg-white lg:bg-transparent overflow-hidden">
+      <div className="relative z-10 lg:z-20 w-full lg:w-[49%] xl:w-[48%] lg:ml-auto min-h-[460px] xs:min-h-[500px] lg:h-full flex flex-col justify-between items-center text-center px-4 xs:px-6 sm:px-10 lg:px-12 pt-3 pb-6 xs:pb-8 sm:py-10 lg:py-12 bg-white lg:bg-transparent overflow-hidden">
         
         {/* Top-Right Floral Bouquet (Hidden on mobile to avoid overlapping text, visible on desktop) */}
         <div className="hidden lg:block absolute top-0 right-0 w-44 sm:w-56 lg:w-68 pointer-events-none select-none z-10 opacity-95 drop-shadow-sm">
