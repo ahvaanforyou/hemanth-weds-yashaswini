@@ -17,9 +17,9 @@ export const HeroSection: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
       </div>
 
-      {/* ── HANGING CHARM ELEMENT (ENLARGED & HANGING CLEANLY FROM THE PHOTO BORDER WITHOUT OVERLAP) ── */}
-      {/* Mobile: Anchored right beneath the right curved edge of the arched photo, enlarged per reference */}
-      <div className="lg:hidden absolute top-[440px] xs:top-[475px] sm:top-[515px] right-1 xs:right-2 sm:right-4 w-20 xs:w-24 sm:w-28 z-30 pointer-events-none select-none drop-shadow-md">
+      {/* ── HANGING CHARM ELEMENT (BIGGER & CONNECTED TO IMAGE BORDER) ── */}
+      {/* Mobile: Anchored seamlessly to the right curved edge of the arched photo, enlarged per reference */}
+      <div className="lg:hidden absolute top-[415px] xs:top-[450px] sm:top-[485px] right-0.5 xs:right-1.5 sm:right-3 w-24 xs:w-28 sm:w-32 z-30 pointer-events-none select-none drop-shadow-md">
         <img
           src="/assets/hanging-charm.png"
           alt="Auspicious Hanging Charm"
@@ -168,10 +168,10 @@ export const HeroSection: React.FC = () => {
 
               {/* Column 3: VENUE (Identical sizing, clean matching structure) */}
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Srikrishna+Convention+Hall+Kalyana+Mandapam+High+Road+Opp+Fire+Station+Bagepalli+Karnataka"
+                href="https://maps.app.goo.gl/3cpy6hmmhegJdgAn8"
                 target="_blank"
                 rel="noreferrer"
-                title="Open Srikrishna Convention Hall in Google Maps"
+                title="Open Venue in Google Maps"
                 className="flex flex-col items-center justify-between px-1 sm:px-2.5 py-1 group/venue cursor-pointer hover:opacity-90 transition-opacity"
               >
                 <div className="w-8 h-8 xs:w-9 xs:h-9 sm:w-10 sm:h-10 rounded-full bg-[#E5F0FA] flex items-center justify-center text-[#30598D] mb-1 sm:mb-2 shadow-xs shrink-0 group-hover/venue:bg-[#142952] group-hover/venue:text-white transition-colors">
