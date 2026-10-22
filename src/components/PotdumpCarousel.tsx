@@ -201,8 +201,8 @@ export const PotdumpCarousel: React.FC = () => {
               }
               if (item.image.includes('couple-real-3')) {
                 return {
-                  position: 'center 28%',
-                  scaleClass: 'scale-[1.18] xs:scale-[1.22] sm:scale-[1.25] group-hover:scale-[1.24] xs:group-hover:scale-[1.28] sm:group-hover:scale-[1.31]',
+                  position: 'center 12%',
+                  scaleClass: 'scale-[1.28] xs:scale-[1.32] sm:scale-[1.36] translate-y-5 xs:translate-y-6 sm:translate-y-7 group-hover:scale-[1.34] xs:group-hover:scale-[1.38] sm:group-hover:scale-[1.42]',
                 };
               }
               if (item.image.includes('couple-real-4')) {
