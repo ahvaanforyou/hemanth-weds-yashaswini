@@ -17,9 +17,9 @@ export const HeroSection: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
       </div>
 
-      {/* ── HANGING CHARM ELEMENT (ENLARGED & ANCHORED SEAMLESSLY TO THE ARCH BORDER) ── */}
-      {/* Mobile: Anchored seamlessly to the right curved edge of the arched photo, enlarged per reference */}
-      <div className="lg:hidden absolute top-[380px] xs:top-[405px] sm:top-[430px] right-2 xs:right-3 sm:right-5 w-16 xs:w-20 sm:w-24 z-30 pointer-events-none select-none drop-shadow-md">
+      {/* ── HANGING CHARM ELEMENT (ENLARGED & HANGING CLEANLY FROM THE PHOTO BORDER WITHOUT OVERLAP) ── */}
+      {/* Mobile: Anchored right beneath the right curved edge of the arched photo, enlarged per reference */}
+      <div className="lg:hidden absolute top-[440px] xs:top-[475px] sm:top-[515px] right-1 xs:right-2 sm:right-4 w-20 xs:w-24 sm:w-28 z-30 pointer-events-none select-none drop-shadow-md">
         <img
           src="/assets/hanging-charm.png"
           alt="Auspicious Hanging Charm"
