@@ -9,6 +9,7 @@ interface PersonDetails {
   parents: string;
   bio: string;
   photo: string;
+  photoPosition?: string;
   quote: string;
 }
 
@@ -21,6 +22,7 @@ export const MeetCoupleSection: React.FC = () => {
     parents: weddingConfig.couple.brideParents,
     bio: weddingConfig.couple.brideBio,
     photo: weddingConfig.couple.bridePhoto,
+    photoPosition: (weddingConfig.couple as any).bridePhotoPosition || 'center',
     quote: 'In his warmth and gentle spirit, I have found my forever home.',
   };
 
@@ -30,6 +32,7 @@ export const MeetCoupleSection: React.FC = () => {
     parents: weddingConfig.couple.groomParents,
     bio: weddingConfig.couple.groomBio,
     photo: weddingConfig.couple.groomPhoto,
+    photoPosition: (weddingConfig.couple as any).groomPhotoPosition || 'center',
     quote: 'Her radiant smile brings pure happiness into my world every single day.',
   };
 
@@ -106,7 +109,8 @@ export const MeetCoupleSection: React.FC = () => {
                 <img
                   src={brideData.photo}
                   alt={brideData.name}
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                  style={{ objectPosition: brideData.photoPosition || 'center' }}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </div>
             </div>
@@ -143,7 +147,8 @@ export const MeetCoupleSection: React.FC = () => {
                 <img
                   src={groomData.photo}
                   alt={groomData.name}
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                  style={{ objectPosition: groomData.photoPosition || 'center' }}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </div>
             </div>

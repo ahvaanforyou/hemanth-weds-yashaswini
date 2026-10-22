@@ -23,17 +23,26 @@ export interface EventItem {
 
 export const weddingConfig = {
   couple: {
+    // =========================================================================
+    // 📸 BRIDE & GROOM PHOTOS CONFIGURATION (EASILY MODIFIABLE)
+    // To change photos, simply put your new image files in `public/client-images/`
+    // and update the paths or framing position below!
+    // =========================================================================
+    bridePhoto: '/client-images/bride.jpg',
+    bridePhotoPosition: 'center', // e.g., 'center', 'top', 'center 30%'
+
+    groomPhoto: '/client-images/groom.jpg',
+    groomPhotoPosition: 'center', // e.g., 'center', 'top', 'center 30%'
+
     bride: 'P. Yashaswini',
     brideShort: 'Yashaswini',
     brideParents: 'D/o - Smt. Bharathi & Sri Prabhakar Babu',
     brideBio: 'A radiant spirit with a gracious heart and infectious smile, bringing warmth and joy to every soul around her.',
-    bridePhoto: '/client-images/bride.jpg',
 
     groom: 'J. Hemanth',
     groomShort: 'Hemanth',
     groomParents: 'S/o - Smt. Pratibha & Sri Tirupathaiah',
     groomBio: 'A gentleman of poise, gentle wisdom, and steady devotion, ready to embark on a beautiful lifelong voyage of companionship.',
-    groomPhoto: '/client-images/groom.jpg',
 
     heroPhoto: '/client-images/hero-couple.png',
     hashtag: '#HemanthWedsYashaswini',
@@ -117,24 +126,24 @@ export const weddingConfig = {
 
   potdump: [
     {
-      image: '/client-images/couple-real-4.jpg',
-      caption: 'Royal Elegance & Divine Grace',
-      tag: 'Kanjeevaram & Sherwani',
-    },
-    {
-      image: '/client-images/couple-real-2.jpg',
-      caption: 'Lost in Each Other’s Smiles',
-      tag: 'Candid Love',
-    },
-    {
       image: '/client-images/couple-real-1.jpg',
-      caption: 'A Lifetime of Laughter Begins',
+      caption: 'Timeless Romance in Black & White',
       tag: 'Cherished Moments',
     },
     {
+      image: '/client-images/couple-real-2.jpg',
+      caption: 'Royal Elegance on the Mandap',
+      tag: 'Traditional Grandeur',
+    },
+    {
       image: '/client-images/couple-real-3.jpg',
-      caption: 'Two Hearts, One Soul',
-      tag: 'Together Always',
+      caption: 'Adoring Smiles & Gentle Whispers',
+      tag: 'Candid Love',
+    },
+    {
+      image: '/client-images/couple-real-4.jpg',
+      caption: 'Together into a Golden Tomorrow',
+      tag: 'Eternal Companionship',
     },
   ],
 

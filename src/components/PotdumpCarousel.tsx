@@ -185,16 +185,16 @@ export const PotdumpCarousel: React.FC = () => {
             const style = getCardTransform(idx, images.length);
             const isCenter = idx === activeIndex;
 
-            // Specific object positioning & zoom to keep each photo perfectly framed & centered
+            // Precision center alignment to frame keeping couple centered & balanced
             const objectPositionClass =
               item.image.includes('couple-real-1')
-                ? 'object-cover object-[center_28%]'
-                : item.image.includes('couple-real-3')
-                ? 'object-cover object-[58%_30%] scale-105'
-                : item.image.includes('couple-real-4')
-                ? 'object-cover object-center scale-125 xs:scale-130 sm:scale-120'
+                ? 'object-cover object-[center_35%]'
                 : item.image.includes('couple-real-2')
-                ? 'object-cover object-[center_20%]'
+                ? 'object-cover object-[center_42%]'
+                : item.image.includes('couple-real-3')
+                ? 'object-cover object-[center_38%]'
+                : item.image.includes('couple-real-4')
+                ? 'object-cover object-[center_42%]'
                 : 'object-cover object-center';
 
             return (
