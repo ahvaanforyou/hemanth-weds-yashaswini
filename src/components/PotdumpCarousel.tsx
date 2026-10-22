@@ -185,17 +185,39 @@ export const PotdumpCarousel: React.FC = () => {
             const style = getCardTransform(idx, images.length);
             const isCenter = idx === activeIndex;
 
-            // Precision center alignment to frame keeping couple centered & balanced
-            const objectPositionClass =
-              item.image.includes('couple-real-1')
-                ? 'object-cover object-[center_35%]'
-                : item.image.includes('couple-real-2')
-                ? 'object-cover object-[center_42%]'
-                : item.image.includes('couple-real-3')
-                ? 'object-cover object-[center_38%]'
-                : item.image.includes('couple-real-4')
-                ? 'object-cover object-[center_42%]'
-                : 'object-cover object-center';
+            // Precision zoom & center alignment to frame keeping couple centered & balanced with HD clarity
+            const getPhotoFraming = () => {
+              if (item.image.includes('couple-real-1')) {
+                return {
+                  position: 'center 30%',
+                  scaleClass: 'scale-[1.16] xs:scale-[1.20] sm:scale-[1.22] group-hover:scale-[1.22] xs:group-hover:scale-[1.26] sm:group-hover:scale-[1.28]',
+                };
+              }
+              if (item.image.includes('couple-real-2')) {
+                return {
+                  position: 'center 40%',
+                  scaleClass: 'scale-[1.28] xs:scale-[1.32] sm:scale-[1.36] group-hover:scale-[1.34] xs:group-hover:scale-[1.38] sm:group-hover:scale-[1.42]',
+                };
+              }
+              if (item.image.includes('couple-real-3')) {
+                return {
+                  position: 'center 28%',
+                  scaleClass: 'scale-[1.18] xs:scale-[1.22] sm:scale-[1.25] group-hover:scale-[1.24] xs:group-hover:scale-[1.28] sm:group-hover:scale-[1.31]',
+                };
+              }
+              if (item.image.includes('couple-real-4')) {
+                return {
+                  position: 'center 33%',
+                  scaleClass: 'scale-[1.28] xs:scale-[1.32] sm:scale-[1.36] group-hover:scale-[1.34] xs:group-hover:scale-[1.38] sm:group-hover:scale-[1.42]',
+                };
+              }
+              return {
+                position: 'center center',
+                scaleClass: 'scale-[1.15] group-hover:scale-[1.20]',
+              };
+            };
+
+            const framing = getPhotoFraming();
 
             return (
               <div
@@ -219,12 +241,15 @@ export const PotdumpCarousel: React.FC = () => {
                   isCenter ? 'hover:shadow-[0_26px_65px_rgba(32,67,126,0.45)] ring-2 ring-[#8BBBE5]/70' : 'hover:opacity-75'
                 }`}
               >
-                {/* Large Format Pristine Photo */}
+                {/* Large Format Pristine Photo with Center Alignment & Lossless Zoom */}
                 <img
                   src={item.image}
                   alt={item.caption}
                   loading="eager"
-                  className={`w-full h-full ${objectPositionClass} transition-transform duration-700 ease-out group-hover:scale-105`}
+                  style={{
+                    objectPosition: framing.position,
+                  }}
+                  className={`w-full h-full object-cover ${framing.scaleClass} transition-transform duration-700 ease-out transform-gpu will-change-transform`}
                 />
 
                 {/* Subtle Inner Theme Inset Frame */}
