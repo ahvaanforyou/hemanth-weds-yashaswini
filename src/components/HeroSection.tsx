@@ -26,6 +26,25 @@ export const HeroSection: React.FC = () => {
         </div>
       </div>
 
+      {/* ── HANGING CHARM ELEMENT (HANGING FROM THE PHOTO TO THE RIGHT SIDE PER REFERENCE) ── */}
+      {/* Mobile: Hanging from the right curve of the arched photo down alongside the names */}
+      <div className="lg:hidden absolute top-[330px] xs:top-[370px] sm:top-[420px] right-2 xs:right-3.5 sm:right-6 w-11 xs:w-12 sm:w-14 z-30 pointer-events-none select-none drop-shadow-md">
+        <img
+          src="/assets/hanging-charm.png"
+          alt="Auspicious Hanging Charm"
+          className="w-full h-auto object-contain"
+        />
+      </div>
+
+      {/* Desktop & Laptop: Elegant hanging accent from the top right */}
+      <div className="hidden lg:block absolute top-10 right-10 xl:right-14 w-14 xl:w-16 z-30 pointer-events-none select-none drop-shadow-md">
+        <img
+          src="/assets/hanging-charm.png"
+          alt="Auspicious Hanging Charm"
+          className="w-full h-auto object-contain"
+        />
+      </div>
+
       {/* ── 2. DESKTOP LAYERED S-WAVE CURTAIN DIVIDER ── */}
       <svg
         className="hidden lg:block absolute inset-0 w-full h-full pointer-events-none z-10"
@@ -148,9 +167,9 @@ export const HeroSection: React.FC = () => {
                 </p>
               </div>
 
-              {/* Column 3: VENUE (Clickable) */}
+              {/* Column 3: VENUE (Clickable - fixed to exact Srikrishna Convention Hall in Bagepalli) */}
               <a
-                href="https://maps.app.goo.gl/xFLQDRQ85W8K1r127?g_st=ac"
+                href="https://www.google.com/maps/search/?api=1&query=Srikrishna+Convention+Hall+Kalyana+Mandapam+High+Road+Opp+Fire+Station+Bagepalli+Karnataka"
                 target="_blank"
                 rel="noreferrer"
                 title="Open Srikrishna Convention Hall in Google Maps"

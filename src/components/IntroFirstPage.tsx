@@ -45,8 +45,8 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
 
       {/* ── 2. MOBILE LAYOUT (PRECISELY POSITIONED PER ANNOTATION) ── */}
       <div className="md:hidden relative z-20 w-full h-[100dvh] flex flex-col items-center pointer-events-none">
-        {/* Top Typography: nestled gracefully inside upper arch, lowered into clear white area */}
-        <div className="pt-16 xs:pt-20 sm:pt-24 px-4 flex flex-col items-center shrink-0">
+        {/* Top Typography: lowered so it clears the arch frame behind it completely */}
+        <div className="pt-24 xs:pt-28 sm:pt-32 px-4 flex flex-col items-center shrink-0">
           <h1 className="font-serif text-[38px] xs:text-[44px] font-normal tracking-tight text-[#162E5A] leading-none drop-shadow-xs">
             Hemanth
           </h1>
@@ -74,17 +74,17 @@ export const IntroFirstPage: React.FC<IntroFirstPageProps> = ({ onOpen }) => {
           </p>
         </div>
 
-        {/* Auspicious Hands: lowered into the open white space */}
-        <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4 mt-7 xs:mt-9">
+        {/* Auspicious Hands: spaced cleanly below the date text */}
+        <div className="w-screen max-w-none select-none drop-shadow-md overflow-hidden flex items-center justify-center -mx-4 mt-5 xs:mt-7">
           <img
             src="/assets/krishna-radha-hands.png"
             alt="Divine Hands of Love & Companionship"
-            className="w-full min-w-[100vw] h-auto object-cover object-center scale-100 xs:scale-105"
+            className="w-full min-w-[100vw] h-auto object-cover object-center scale-95 xs:scale-100"
           />
         </div>
 
-        {/* Tap to Open Button: brought comfortably higher above the temple */}
-        <div className="pointer-events-auto mt-auto mb-32 xs:mb-36 sm:mb-40">
+        {/* Tap to Open Button: positioned above the background temple roof in the white space */}
+        <div className="pointer-events-auto mt-auto mb-48 xs:mb-52 sm:mb-56">
           <button
             onClick={handleTapToOpen}
             className="group relative inline-flex items-center justify-between gap-4 xs:gap-5 px-8 xs:px-10 py-3 xs:py-3.5 rounded-full bg-white text-[#152E5A] border-2 border-[#E5C378] shadow-[0_12px_36px_rgba(212,175,55,0.4),0_6px_16px_rgba(22,46,90,0.14)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
