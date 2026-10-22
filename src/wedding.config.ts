@@ -29,7 +29,7 @@ export const weddingConfig = {
     // and update the paths or framing position below!
     // =========================================================================
     bridePhoto: '/client-images/bride.jpg',
-    bridePhotoPosition: 'center 20%',
+    bridePhotoPosition: 'center 4%',
 
     groomPhoto: '/client-images/groom.jpg',
     groomPhotoPosition: 'center 15%',

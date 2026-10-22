@@ -5,30 +5,21 @@ import { weddingConfig } from '../wedding.config';
 export const HeroSection: React.FC = () => {
   return (
     <section id="hero" className="relative w-full min-h-screen lg:h-screen overflow-hidden bg-white flex flex-col lg:flex-row">
-      {/* ── 1. LEFT BACKGROUND: HIGH-RES COUPLE ON TERRACE SUNSET PHOTO (CRISP, NATURAL HD CLARITY) ── */}
-      {/* On mobile: semi-elliptical arched frame matching reference image 1, natural HD zoom for sharp facial clarity */}
-      <div className="relative w-full lg:absolute lg:inset-y-0 lg:left-0 lg:w-[70%] xl:w-[72%] h-[380px] xs:h-[420px] sm:h-[480px] lg:h-full overflow-hidden bg-[#0F1E33] shrink-0 rounded-b-[48%_38px] sm:rounded-b-[50%_60px] lg:rounded-none shadow-md lg:shadow-none z-10">
+      {/* ── 1. LEFT BACKGROUND: HIGH-RES COUPLE ON TERRACE SUNSET PHOTO (EXPANDED VERTICALLY PER REFERENCE) ── */}
+      {/* On mobile: deep parabolic arched frame taking ~52% height matching reference mockup */}
+      <div className="relative w-full lg:absolute lg:inset-y-0 lg:left-0 lg:w-[70%] xl:w-[72%] h-[460px] xs:h-[500px] sm:h-[540px] lg:h-full overflow-hidden bg-[#0F1E33] shrink-0 rounded-b-[50%_75px] xs:rounded-b-[50%_90px] sm:rounded-b-[50%_110px] lg:rounded-none shadow-md lg:shadow-none z-10">
         <img
           src="/client-images/hero-couple-landscape.jpg"
           alt="Hemanth & Yashaswini"
-          className="w-full h-full object-cover object-[36%_22%] lg:object-[36%_center] scale-110 xs:scale-115 lg:scale-115 transition-transform duration-1000 ease-out hover:scale-120"
+          className="w-full h-full object-cover object-[36%_20%] lg:object-[36%_center] scale-110 xs:scale-115 lg:scale-115 transition-transform duration-1000 ease-out hover:scale-120"
         />
         {/* Subtle sunset warmth wash */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
-
-        {/* Mobile Arch Accent Floral Spray along Bottom-Left of the Arched Couple Photo */}
-        <div className="lg:hidden absolute -bottom-6 -left-6 w-36 xs:w-44 pointer-events-none select-none z-20 drop-shadow-md">
-          <img
-            src="/assets/flower-branch-full.png"
-            alt=""
-            className="w-full h-auto object-contain rotate-[-15deg]"
-          />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
       </div>
 
-      {/* ── HANGING CHARM ELEMENT (HANGING SEAMLESSLY FROM THE PHOTO BORDER) ── */}
-      {/* Mobile: Anchored seamlessly to the right curved edge of the arched photo, enlarged for elegance */}
-      <div className="lg:hidden absolute top-[315px] xs:top-[350px] sm:top-[400px] right-2 xs:right-3.5 sm:right-6 w-14 xs:w-16 sm:w-20 z-30 pointer-events-none select-none drop-shadow-md">
+      {/* ── HANGING CHARM ELEMENT (ENLARGED & ANCHORED SEAMLESSLY TO THE ARCH BORDER) ── */}
+      {/* Mobile: Anchored seamlessly to the right curved edge of the arched photo, enlarged per reference */}
+      <div className="lg:hidden absolute top-[380px] xs:top-[405px] sm:top-[430px] right-2 xs:right-3 sm:right-5 w-16 xs:w-20 sm:w-24 z-30 pointer-events-none select-none drop-shadow-md">
         <img
           src="/assets/hanging-charm.png"
           alt="Auspicious Hanging Charm"
@@ -73,8 +64,8 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* ── 4. RIGHT CONTENT AREA: TYPOGRAPHY & 3-COLUMN CARD ── */}
-      {/* On mobile: pulled upward to eliminate dead white space below the couple photo */}
-      <div className="relative z-20 w-full lg:w-[49%] xl:w-[48%] lg:ml-auto lg:h-full flex flex-col justify-between items-center text-center px-4 xs:px-6 sm:px-10 lg:px-12 pt-3 pb-6 xs:pt-4 xs:pb-8 sm:py-10 lg:py-12 bg-white lg:bg-transparent overflow-hidden -mt-3 xs:-mt-4 lg:mt-0">
+      {/* On mobile: full vertical flow with typography centered and 3-column card resting at the bottom */}
+      <div className="relative z-20 w-full lg:w-[49%] xl:w-[48%] lg:ml-auto min-h-[460px] xs:min-h-[500px] lg:h-full flex flex-col justify-between items-center text-center px-4 xs:px-6 sm:px-10 lg:px-12 pt-3 pb-6 xs:pb-8 sm:py-10 lg:py-12 bg-white lg:bg-transparent overflow-hidden">
         
         {/* Top-Right Floral Bouquet (Hidden on mobile to avoid overlapping text, visible on desktop) */}
         <div className="hidden lg:block absolute top-0 right-0 w-44 sm:w-56 lg:w-68 pointer-events-none select-none z-10 opacity-95 drop-shadow-sm">
@@ -97,14 +88,14 @@ export const HeroSection: React.FC = () => {
         {/* Top Spacer for vertical balance (desktop only) */}
         <div className="hidden lg:block w-full h-6" />
 
-        {/* ── CENTER: VECTOR TYPOGRAPHY (MATCHING REFERENCE IMAGE 1) ── */}
-        <div className="relative z-20 lg:my-auto flex flex-col items-center pt-1 pb-4 xs:pb-5 sm:py-6 w-full">
+        {/* ── CENTER: VECTOR TYPOGRAPHY (MATCHING REFERENCE IMAGE) ── */}
+        <div className="relative z-20 my-auto flex flex-col items-center py-2 sm:py-6 w-full">
           {/* THE WEDDING OF with Star & Hairlines */}
           <div className="flex flex-col items-center">
             <p className="font-sans text-[11px] xs:text-xs sm:text-sm tracking-[0.38em] uppercase font-semibold text-[#2C4872]">
               THE WEDDING OF
             </p>
-            <div className="mt-1.5 sm:mt-2.5 flex items-center justify-center gap-3 sm:gap-4">
+            <div className="mt-1.5 sm:mt-2 flex items-center justify-center gap-3 sm:gap-4">
               <span className="h-[1px] w-10 sm:w-16 bg-[#B2CAE2]" />
               <span className="text-[#142952] text-xs">★</span>
               <span className="h-[1px] w-10 sm:w-16 bg-[#B2CAE2]" />
@@ -112,7 +103,7 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Groom Name */}
-          <h1 className="mt-2.5 xs:mt-3 sm:mt-5 font-serif text-[42px] xs:text-[50px] sm:text-[68px] lg:text-[76px] xl:text-[88px] font-normal tracking-tight text-[#142952] leading-[1.02] drop-shadow-xs">
+          <h1 className="mt-2.5 xs:mt-3 sm:mt-4 font-serif text-[44px] xs:text-[52px] sm:text-[68px] lg:text-[76px] xl:text-[88px] font-normal tracking-tight text-[#142952] leading-[1.02] drop-shadow-xs">
             Hemanth
           </h1>
 
@@ -126,13 +117,20 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Bride Name */}
-          <h2 className="font-serif text-[42px] xs:text-[50px] sm:text-[68px] lg:text-[76px] xl:text-[88px] font-normal tracking-tight text-[#142952] leading-[1.02] drop-shadow-xs">
+          <h2 className="font-serif text-[44px] xs:text-[52px] sm:text-[68px] lg:text-[76px] xl:text-[88px] font-normal tracking-tight text-[#142952] leading-[1.02] drop-shadow-xs">
             Yashaswini
           </h2>
+
+          {/* Hairline with center diamond ornament (matching reference) */}
+          <div className="mt-2.5 sm:mt-3 flex items-center justify-center gap-3 sm:gap-4 text-[#2C4872]">
+            <span className="h-[1px] w-12 sm:w-16 bg-[#B2CAE2]" />
+            <span className="text-[#2C4872] text-[10px] xs:text-xs">◆</span>
+            <span className="h-[1px] w-12 sm:w-16 bg-[#B2CAE2]" />
+          </div>
         </div>
 
-        {/* ── BOTTOM: FROSTED 3-COLUMN CARD (ALL 3 SECTIONS IDENTICAL SIZE & HEIGHT) ── */}
-        <div className="relative z-20 w-full max-w-[480px] sm:max-w-[510px] lg:max-w-[530px] pt-1 pb-2 sm:pb-4">
+        {/* ── BOTTOM: FROSTED 3-COLUMN CARD (PINNED AT BOTTOM PER USER REQUEST) ── */}
+        <div className="relative z-20 w-full max-w-[480px] sm:max-w-[510px] lg:max-w-[530px] mt-auto pt-2 pb-2 sm:pb-4">
           <div className="bg-white/95 rounded-3xl p-3 xs:p-4 sm:p-5 border border-[#E2EEF8] shadow-[0_14px_36px_rgba(20,45,85,0.06)]">
             <div className="grid grid-cols-3 divide-x divide-[#E3EDF6] items-stretch text-center">
               
