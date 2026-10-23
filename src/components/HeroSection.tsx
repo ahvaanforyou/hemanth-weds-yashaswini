@@ -168,7 +168,7 @@ export const HeroSection: React.FC = () => {
 
               {/* Column 3: VENUE (Identical sizing, clean matching structure) */}
               <a
-                href="https://maps.app.goo.gl/3cpy6hmmhegJdgAn8"
+                href="https://maps.app.goo.gl/ScxjmRYPoCQ6ohr36?g_st=aw"
                 target="_blank"
                 rel="noreferrer"
                 title="Open Venue in Google Maps"

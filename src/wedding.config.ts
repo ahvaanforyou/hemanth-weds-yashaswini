@@ -155,7 +155,7 @@ export const weddingConfig = {
       label: 'Wedding & Mangalya Dharanam Venue',
       eventsHosted: ['Wedding & Dinner (31 Oct)', 'Mangalya Dharanam (01 Nov)'],
       address: 'High Road, Opp: Fire Station, Bagepalli, Karnataka',
-      mapsSearchUrl: 'https://maps.app.goo.gl/3cpy6hmmhegJdgAn8',
+      mapsSearchUrl: 'https://maps.app.goo.gl/ScxjmRYPoCQ6ohr36?g_st=aw',
       embedUrl: 'https://maps.google.com/maps?q=srikrishna+convention+hall+kalyana+mandapam+bagepalli+karnataka&t=&z=15&ie=UTF8&iwloc=&output=embed',
     },
     {
